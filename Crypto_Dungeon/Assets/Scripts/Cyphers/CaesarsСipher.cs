@@ -16,10 +16,6 @@ public class CaesarsСipher : Cipher
     {
         string encodedMessage = "";
         char[] alphabet = AlphabetManager.GetAlphabet(Alphabet);
-        //foreach (var item in alphabet)
-        //{
-        //    var res = item + 0;
-        //}
 
         for (int i = 0; i < Message.Length; i++)
         {
@@ -30,7 +26,10 @@ public class CaesarsСipher : Cipher
             if ((int)Message[i] > 1045)
                 charIndex++;
 
-            encodedMessage += alphabet[(charIndex + Shift) % alphabet.Length];
+            var pos = (charIndex + Shift);
+            pos = pos < 0 ? alphabet.Length + pos : pos;
+
+            encodedMessage += alphabet[pos % alphabet.Length];
         }
 
         return encodedMessage;
@@ -38,6 +37,9 @@ public class CaesarsСipher : Cipher
 
     public override string Decode(string message)
     {
-        throw new System.NotImplementedException();
+        Shift = -Shift;
+        var res = Encode(message);
+        Shift = -Shift;
+        return res;
     }
 }

@@ -17,4 +17,10 @@ public class DebugCiphersButtonOperations : MonoBehaviour
         Caesars—ipher cipher = new Caesars—ipher(_messageTMP.text, Alphabet.EN, shift);
         _encodedMessageTMP.text = cipher.—ipherText;
     }
+
+    public void EncodeWithReverse()
+    {
+        ReverseCypher reverseCypher = new ReverseCypher(_messageTMP.text);
+        _encodedMessageTMP.text = reverseCypher.—ipherText;
+    }
 }
