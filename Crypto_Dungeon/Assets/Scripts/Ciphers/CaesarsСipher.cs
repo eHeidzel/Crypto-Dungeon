@@ -1,5 +1,4 @@
 using Assets.Scripts.Cyphers;
-using System;
 
 public class CaesarsСipher : Cipher
 {
@@ -17,13 +16,13 @@ public class CaesarsСipher : Cipher
         string encodedMessage = "";
         char[] alphabet = AlphabetManager.GetAlphabet(Alphabet);
 
-        for (int i = 0; i < Message.Length; i++)
+        for (int i = 0; i < message.Length; i++)
         {
-            var charIndex = Message[i] - (int)alphabet[0];
+            var charIndex = message[i] - (int)alphabet[0];
 
-            if ((int)Message[i] == 1025)
+            if ((int)message[i] == 1025)
                 charIndex = 6;
-            if ((int)Message[i] > 1045)
+            if ((int)message[i] > 1045)
                 charIndex++;
 
             var pos = (charIndex + Shift);

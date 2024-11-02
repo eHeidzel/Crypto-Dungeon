@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\cyphers\\reversecypher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cyphers\\reversecypher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\logtests\\cipherslogtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\logtests\\cipherslogtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\buttonsoperations\\debugciphersbuttonoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonsoperations\\debugciphersbuttonoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\ciphers\\additional\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ciphers\\additional\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\cyphers\\reversecipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\cyphers\\reversecipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,28 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ReverseCypher.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Cyphers\\ReverseCypher.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Cyphers\\ReverseCypher.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Cyphers\\ReverseCypher.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Cyphers\\ReverseCypher.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAAAAAA",
+              "Title": "CiphersLogTest.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
+              "RelativeToolTip": "Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAAwCsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T11:12:36.069Z",
+              "WhenOpened": "2024-11-02T06:19:43.579Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "DebugCiphersButtonOperations.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\ButtonsOperations\\DebugCiphersButtonOperations.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonsOperations\\DebugCiphersButtonOperations.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\ButtonsOperations\\DebugCiphersButtonOperations.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ButtonsOperations\\DebugCiphersButtonOperations.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAA7AAAA",
+              "Title": "Cipher.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T09:56:19.248Z",
+              "WhenOpened": "2024-11-01T12:40:05.876Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ReverseCipher.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Cyphers\\ReverseCipher.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Cyphers\\ReverseCipher.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Cyphers\\ReverseCipher.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Cyphers\\ReverseCipher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-01T11:59:06.585Z"
             }
           ]
         }
