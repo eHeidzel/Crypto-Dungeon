@@ -1,35 +1,53 @@
 using Assets.Scripts.Cyphers;
+using System;
 
 public class CaesarsСipher : Cipher
 {
     public int Shift { get; private set; }
-    public Alphabet Alphabet { get; private set; }
+    public readonly Alphabet Alphabet;
+    public readonly char[] AlphabetChars;
 
-    public CaesarsСipher(string message, Alphabet alphabet, int shift) : base(message)
+    public CaesarsСipher(string message, Alphabet alphabet) : base(message)
+    {
+        Alphabet = alphabet;
+        AlphabetChars = AlphabetManager.GetAlphabet(alphabet);
+    }
+
+    public CaesarsСipher(string message, Alphabet alphabet, int shift) : this(message, alphabet)
     {
         Shift = shift;
-        Alphabet = alphabet;
+    }
+
+    protected int GetCharIndexInAlphabet(char ch)
+    {
+        var charIndex = ch - (int)AlphabetChars[0];
+
+        if ((int)ch == 1025)
+            charIndex = 6;
+        if ((int)ch > 1045)
+            charIndex++;
+
+        return charIndex;
+    }
+
+    protected char EncodeSym(char symToEncode, int shift)
+    {
+        int charIndex = GetCharIndexInAlphabet(symToEncode);
+
+        var pos = charIndex + shift;
+
+        if (pos < 0)
+            pos = AlphabetChars.Length - Math.Abs(pos);
+
+        return AlphabetChars[pos % AlphabetChars.Length];
     }
 
     public override string Encode(string message)
     {
         string encodedMessage = "";
-        char[] alphabet = AlphabetManager.GetAlphabet(Alphabet);
 
         for (int i = 0; i < message.Length; i++)
-        {
-            var charIndex = message[i] - (int)alphabet[0];
-
-            if ((int)message[i] == 1025)
-                charIndex = 6;
-            if ((int)message[i] > 1045)
-                charIndex++;
-
-            var pos = (charIndex + Shift);
-            pos = pos < 0 ? alphabet.Length + pos : pos;
-
-            encodedMessage += alphabet[pos % alphabet.Length];
-        }
+            encodedMessage += EncodeSym(message[i], Shift);
 
         return encodedMessage;
     }

@@ -5,8 +5,8 @@ public class CiphersLogTest : MonoBehaviour
     [SerializeField] string messageRU = "İÒÎÒÅÑÒÍÀĞÓÑÑÊÎÌ";
     [SerializeField] string messageEN = "THISISTESTINENGLISH";
 
-    [SerializeField] string keyWordRU = "ÊËŞ×";
-    [SerializeField] string keyWordEN = "KEY";
+    [SerializeField] string keyRU = "ÊËŞ×";
+    [SerializeField] string keyEN = "KEY";
 
     [SerializeField] int shift = 1;
 
@@ -17,6 +17,12 @@ public class CiphersLogTest : MonoBehaviour
 
         CaesarTestRU();
         CaesarTestEN();
+
+        Ladder(messageRU);
+        Ladder(messageEN);
+
+        CaesarWithKeyRU();
+        CaesarWithKeyEN();
     }
 
     public void Test(Cipher cipher)
@@ -41,13 +47,13 @@ public class CiphersLogTest : MonoBehaviour
     public void CaesarWithKeyRU()
     {
         print("\nØèôğ Öåçàğÿ ñ êëş÷îì íà ğóññêîì");
-        //Test(new CaesarsWithKeyÑipher(messageRU, Alphabet.RU, keyWordRU));
+        Test(new CaesarsWithKeyÑipher(messageRU, Alphabet.RU, keyRU));
     }
 
     public void CaesarWithKeyEN()
     {
         print("\nØèôğ Öåçàğÿ ñ êëş÷îì íà àíãëèéñêîì");
-        //Test(new CaesarsWithKeyÑipher(messageEN, Alphabet.EN, keyWordEN));
+        Test(new CaesarsWithKeyÑipher(messageEN, Alphabet.EN, keyEN));
     }
 
     public void VegeneraRU()
@@ -87,6 +93,6 @@ public class CiphersLogTest : MonoBehaviour
     public void Ladder(string message)
     {
         print("\nØèôğ ëåñåíêè íà îáîèõ ÿçûêàõ");
-        //Test(new LadderCipher(message));
+        Test(new LadderCipher(message));
     }
 }
