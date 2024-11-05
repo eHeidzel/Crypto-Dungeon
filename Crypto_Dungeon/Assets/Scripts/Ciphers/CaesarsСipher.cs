@@ -1,3 +1,4 @@
+using Assets.Scripts.Ciphers.Additional;
 using Assets.Scripts.Cyphers;
 using System;
 
@@ -18,21 +19,9 @@ public class CaesarsСipher : Cipher
         Shift = shift;
     }
 
-    protected int GetCharIndexInAlphabet(char ch)
-    {
-        var charIndex = ch - (int)AlphabetChars[0];
-
-        if ((int)ch == 1025)
-            charIndex = 6;
-        if ((int)ch > 1045)
-            charIndex++;
-
-        return charIndex;
-    }
-
     protected char EncodeSym(char symToEncode, int shift)
     {
-        int charIndex = GetCharIndexInAlphabet(symToEncode);
+        int charIndex = Helper.GetCharIndexInAlphabet(symToEncode, AlphabetChars[0]);
 
         var pos = charIndex + shift;
 

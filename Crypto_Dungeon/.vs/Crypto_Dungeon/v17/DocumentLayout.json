@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\ciphers\\additional\\alphabetmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ciphers\\additional\\alphabetmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\ciphers\\caesarswithkey\u0441ipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ciphers\\caesarswithkey\u0441ipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\ciphers\\caesars\u0441ipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ciphers\\caesars\u0441ipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\ciphers\\skitalacipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ciphers\\skitalacipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\logtests\\cipherslogtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\logtests\\cipherslogtest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\ciphers\\additional\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ciphers\\additional\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,56 +22,51 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "AlphabetManager.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\AlphabetManager.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Ciphers\\Additional\\AlphabetManager.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\AlphabetManager.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Ciphers\\Additional\\AlphabetManager.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T09:01:50.963Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Caesars\u0421ipher.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Caesars\u0421ipher.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Ciphers\\Caesars\u0421ipher.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Caesars\u0421ipher.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Ciphers\\Caesars\u0421ipher.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAUwCkAAAAAAAAA",
+              "Title": "Cipher.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAxAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T08:49:18.647Z",
+              "WhenOpened": "2024-11-05T14:48:15.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SkitalaCipher.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\SkitalaCipher.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ciphers\\SkitalaCipher.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\SkitalaCipher.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ciphers\\SkitalaCipher.cs",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAACsAAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-05T13:50:21.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CaesarsWithKey\u0421ipher.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\CaesarsWithKey\u0421ipher.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Ciphers\\CaesarsWithKey\u0421ipher.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\CaesarsWithKey\u0421ipher.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Ciphers\\CaesarsWithKey\u0421ipher.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAUwBEAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-02T08:05:19.151Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "CiphersLogTest.cs",
               "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
               "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
               "RelativeToolTip": "Assets\\Scripts\\LogTests\\CiphersLogTest.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAUwB0AAAAAAAAA",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAACcAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-02T06:19:43.579Z",
               "EditorCaption": ""

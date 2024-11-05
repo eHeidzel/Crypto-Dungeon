@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class CiphersLogTest : MonoBehaviour
@@ -9,6 +10,7 @@ public class CiphersLogTest : MonoBehaviour
     [SerializeField] string keyEN = "KEY";
 
     [SerializeField] int shift = 1;
+    [SerializeField] TextMeshProUGUI vegenereOutputRU, vegenereOutputEN;
 
     void Start()
     {
@@ -23,6 +25,12 @@ public class CiphersLogTest : MonoBehaviour
 
         CaesarWithKeyRU();
         CaesarWithKeyEN();
+
+        VegeneraRU();
+        VegeneraEN();
+
+        SkitalaRU();
+        SkitalaEN();
     }
 
     public void Test(Cipher cipher)
@@ -59,23 +67,13 @@ public class CiphersLogTest : MonoBehaviour
     public void VegeneraRU()
     {
         print("\nШифр Веженера на русском");
-        //Test(new VigenereCipher(messageRU, Alphabet.RU, keyWordRU));
+        Test(new VegenereCipher(messageRU, Alphabet.RU, keyRU));
     }
 
     public void VegeneraEN()
     {
         print("\nШифр Веженера на английском");
-        //Test(new VigenereCipher(messageEN, Alphabet.EN, keyWordEN));
-    }
-
-    public void MagicalSquareRU()
-    {
-        print("\nШифр магического квадрата на русском");
-    }
-
-    public void MagicalSquareEN()
-    {
-        print("\nШифр магического квадрата на английском");
+        Test(new VegenereCipher(messageEN, Alphabet.EN, keyEN));
     }
 
     public void ReverseTest(string message)
@@ -84,10 +82,16 @@ public class CiphersLogTest : MonoBehaviour
         Test(new ReverseCipher(message));
     }
 
-    public void Skitala(string message)
+    public void SkitalaRU()
     {
-        print("\nШифр скитала на обоих языках");
-        //Test(new SkitalaCipher(message));
+        print("\nШифр скитала на русском");
+        Test(new SkitalaCipher(messageRU, Alphabet.RU, shift));
+    }
+
+    public void SkitalaEN()
+    {
+        print("\nШифр скитала на английском");
+        Test(new SkitalaCipher(messageEN, Alphabet.EN, shift));
     }
 
     public void Ladder(string message)
