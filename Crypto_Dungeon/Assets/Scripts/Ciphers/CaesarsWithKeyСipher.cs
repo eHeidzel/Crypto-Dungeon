@@ -1,5 +1,4 @@
-using System.Security.Cryptography;
-using UnityEditor.VersionControl;
+using Assets.Scripts.Ciphers.Additional;
 
 public class CaesarsWithKeyСipher : CaesarsСipher
 {
@@ -13,10 +12,10 @@ public class CaesarsWithKeyСipher : CaesarsСipher
     public override string Encode(string message)
     {
         string res = "";
-        string fullKey = GenerateFullKey(message);
+        string fullKey = Helper.GenerateFullKey(Key, message);
 
         for (int i = 0; i < message.Length; i++)
-            res += EncodeSym(message[i], GetCharIndexInAlphabet(fullKey[i]));
+            res += EncodeSym(message[i], Helper.GetCharIndexInAlphabet(fullKey[i], AlphabetChars[0]));
 
         return res;
     }
@@ -24,21 +23,11 @@ public class CaesarsWithKeyСipher : CaesarsСipher
     public override string Decode(string message)
     {
         string res = "";
-        string fullKey = GenerateFullKey(message);
+        string fullKey = Helper.GenerateFullKey(Key, message);
 
         for (int i = 0; i < message.Length; i++)
-            res += EncodeSym(message[i], -GetCharIndexInAlphabet(fullKey[i]));
+            res += EncodeSym(message[i], -Helper.GetCharIndexInAlphabet(fullKey[i], AlphabetChars[0]));
 
         return res;
-    }
-
-    private string GenerateFullKey(string message)
-    {
-        string fullKey = "";
-
-        for (int i = 0; i < message.Length; i++)
-            fullKey += Key[i % Key.Length];
-
-        return fullKey;
     }
 }
