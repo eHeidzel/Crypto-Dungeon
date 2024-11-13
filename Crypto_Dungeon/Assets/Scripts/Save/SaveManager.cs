@@ -1,0 +1,92 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace Assets.Scripts.Save
+{
+    internal class SaveManager
+    {
+        private const string FILENAME = "save";
+        private const string DEFAULT_IP_ADDRESS = "127.0.0.1";
+        private const string DEFAULT_IP_PORT = "8000";
+
+        private string _address;
+        public string IP_Address
+        {
+            get => _address ?? DEFAULT_IP_ADDRESS;
+            set
+            {
+                if (DataValidator.IsIPAddressValid(value))
+                    _address = value;
+                else
+                {
+                    _port = Instance?.IP_Address ?? DEFAULT_IP_ADDRESS;
+                    SetErrorState("IP address is in incorrect format. Please change the value");
+                }
+            }
+        }
+
+        private string _port;
+        public string IP_Port
+        {
+            get => _port ?? DEFAULT_IP_PORT;
+            set
+            {
+                if (DataValidator.IsIPPortValid(value))
+                    _port = value;
+                else
+                {
+                    _port = Instance?.IP_Port ?? DEFAULT_IP_PORT;
+                    SetErrorState("IP port is in incorrect format. Please change the value");
+                }
+            }
+        }
+
+        private List<PlayerScriptableObject> _players;
+        public List<PlayerScriptableObject> Players
+        {
+            get => _players?.ToList();
+            private set => _players = value;
+        }
+
+        public int GetHpByPlayerName(string nickname) => _players.Where(p => p.Nickname == nickname).First().Hp;
+
+        public float Balance {  get; set; }
+        public bool IsError { get; private set; }
+        public string ErrorMessage { get; private set; }
+
+        private SaveManager() { }
+        private static SaveManager _instance;
+        public static SaveManager Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = GetLatestSave() ?? new SaveManager();
+
+                return _instance;
+            }
+            set => _instance = value;
+        }
+
+        public static SaveManager GetLatestSave()
+        {
+            DataSerializer.TryLoad(FILENAME, out SaveManager save);
+
+            return save;
+        }
+
+        public void Save() => DataSerializer.Save(this, FILENAME);
+
+        private void SetErrorState(string message)
+        {
+            IsError = true;
+            ErrorMessage = message;
+        }
+
+        public void ResetError()
+        {
+            IsError = false;
+            ErrorMessage = "";
+        }
+    }
+}
