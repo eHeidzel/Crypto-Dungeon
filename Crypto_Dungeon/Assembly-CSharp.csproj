@@ -115,11 +115,14 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Ciphers\Additional\AlphabetManager.cs" />
+    <Compile Include="Assets\Scripts\Input\InputKeysReader.cs" />
     <Compile Include="Assets\Scripts\Save\DataSerializer.cs" />
+    <Compile Include="Assets\Scripts\EasterEggs\Dota.cs" />
     <Compile Include="Assets\Scripts\HAHAH.cs" />
     <Compile Include="Assets\Scripts\Ciphers\Additional\Helper.cs" />
     <Compile Include="Assets\Scripts\Market\ScriptableObjects\ShopScriptableObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
+    <Compile Include="Assets\Scripts\Input\InputKeysReaderWithChecker.cs" />
     <Compile Include="Assets\Scripts\Market\Items\ShopItemsActions.cs" />
   </ItemGroup>
   <ItemGroup>

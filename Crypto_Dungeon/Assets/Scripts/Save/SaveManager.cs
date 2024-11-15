@@ -19,7 +19,7 @@ namespace Assets.Scripts.Save
                     _address = value;
                 else
                 {
-                    _port = Instance?.IP_Address ?? DEFAULT_IP_ADDRESS;
+                    _address = Instance?.IP_Address ?? DEFAULT_IP_ADDRESS;
                     SetErrorState("IP address is in incorrect format. Please change the value");
                 }
             }
