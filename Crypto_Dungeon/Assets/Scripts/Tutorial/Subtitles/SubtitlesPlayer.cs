@@ -12,7 +12,7 @@ public class SubtitlesPlayer : MonoBehaviour
     [SerializeField] private TextMeshProUGUI subtitlesText;
 
     private string fullPath { get => $"{Application.streamingAssetsPath}{sep}Subtitles{sep}{type}{sep}{filename}.txt"; }
-
+    
     private Subtitle[] subtitles;
 
     private void Start()

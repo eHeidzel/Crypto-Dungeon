@@ -1,8 +1,6 @@
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.UI;
 
 public class InputKeysReaderWithChecker : InputKeysReader
 {
@@ -16,7 +14,6 @@ public class InputKeysReaderWithChecker : InputKeysReader
     private new void Start()
     {
         _checkSequence = _checkSequence.ToLower();
-        _onSeqFoundArgs[0] = _onSeqFoundArgs[0].GetComponent<Image>();
         base.Start();
         StartCoroutine(CheckOnSequence());
 
@@ -29,7 +26,10 @@ public class InputKeysReaderWithChecker : InputKeysReader
         yield return new WaitForSeconds(_cutSequenceDelayInMilliseconds / 1000);
 
         if (_text.Length > _checkSequence.Length)
-            _text.Remove(_checkSequence.Length, _text.Length - _checkSequence.Length);
+        {
+            _text = _text.Substring(0, _checkSequence.Length);
+            _afterUpdate?.Invoke();
+        }
 
         StartCoroutine(CutSequence());
     }
@@ -38,9 +38,11 @@ public class InputKeysReaderWithChecker : InputKeysReader
     {
         yield return new WaitForSeconds(_checkOnSequenceDelayInMilliseconds / 1000);
 
-        if (_text.ToString().ToLower() == _checkSequence)
-            _onSeqFound.Invoke(_onSeqFoundArgs);
+        if (_text.ToLower() == _checkSequence)
+            _onSeqFound?.Invoke(_onSeqFoundArgs);
 
         StartCoroutine(CheckOnSequence());
     }
+
+    public void SetCheckSeq(string text) => _checkSequence = text;
 }

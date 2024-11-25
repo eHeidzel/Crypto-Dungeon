@@ -9,18 +9,18 @@ public class DebugCiphersButtonOperations : MonoBehaviour
     public void EncodeTextWithCaesarRU(int shift)
     {
         Caesars—ipher cipher = new Caesars—ipher(_messageTMP.text, Alphabet.RU, shift);
-        _encodedMessageTMP.text = cipher.CipherText;
+        _encodedMessageTMP.text = cipher.EncodedText;
     }
 
     public void EncodeTextWithCaesarEN(int shift)
     {
         Caesars—ipher cipher = new Caesars—ipher(_messageTMP.text, Alphabet.EN, shift);
-        _encodedMessageTMP.text = cipher.CipherText;
+        _encodedMessageTMP.text = cipher.EncodedText;
     }
 
     public void EncodeWithReverse()
     {
         ReverseCipher reverseCypher = new ReverseCipher(_messageTMP.text);
-        _encodedMessageTMP.text = reverseCypher.CipherText;
+        _encodedMessageTMP.text = reverseCypher.EncodedText;
     }
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,7 +10,7 @@ public class EasterEggsActions : MonoBehaviour
     /// <param name="args"></param>
     public void ShowDota(Object[] args)
     {
-        Image image = (Image)args[0];
+        Image image = args[0].GetComponent<Image>();
         Sprite sprite = (Sprite)args[1];
         image.overrideSprite = sprite;
     }
