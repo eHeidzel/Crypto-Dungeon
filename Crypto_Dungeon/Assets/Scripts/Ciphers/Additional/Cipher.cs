@@ -1,17 +1,15 @@
-using UnityEngine;
-
-public abstract class Cipher : MonoBehaviour
+public abstract class Cipher
 {
-    public string Message;
+    public string Message { get; private set; }
 
-    public string EncodedText { get => Encode(Message); }
+    public string CipherText { get => Encode(Message); }
 
     public Cipher(string message)
     {
         Message = message;
     }
 
-    public bool IsAnswerCorrectlyEncoded(string encodedMessage) => EncodedText == encodedMessage;
+    public bool IsAnswerCorrectlyEncoded(string encodedMessage) => CipherText == encodedMessage;
     public bool IsAnswerCorrectlyDecoded(string decodedMessage) => Message == decodedMessage;
 
     public abstract string Encode(string message);

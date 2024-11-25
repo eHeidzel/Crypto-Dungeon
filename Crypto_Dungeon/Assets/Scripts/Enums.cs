@@ -10,9 +10,3 @@ public enum MarketCategory
     Equipment,
     Consumables
 }
-
-public enum FontType
-{
-    Chapter,
-    Author
-}

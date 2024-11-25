@@ -36,8 +36,8 @@ public class CiphersLogTest : MonoBehaviour
     public void Test(Cipher cipher)
     {
         print($"\nИсходный текст: {cipher.Message} " +
-        $"Шифротекст: {cipher.EncodedText} " +
-        $"Дешифрованный шифротекст: {cipher.Decode(cipher.EncodedText)}");
+        $"Шифротекст: {cipher.CipherText} " +
+        $"Дешифрованный шифротекст: {cipher.Decode(cipher.CipherText)}");
     }
 
     public void CaesarTestRU()
