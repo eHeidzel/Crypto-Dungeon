@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|d:\\unityprojects\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\movement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|d:\\unityprojects\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\drawimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\drawimages.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -31,6 +35,19 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "Movement.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Player\\Movement.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\Movement.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Player\\Movement.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Player\\Movement.cs",
+              "ViewState": "AQIAAAgAAAAAAAAAAAAAwAYAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T06:55:02.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "DrawImages.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\DrawImages.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\DrawImages.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Slider.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\Slider.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Tutorial\\Slider.cs",
@@ -51,12 +68,11 @@
               "RelativeToolTip": "Assets\\Scripts\\Tutorial\\Slider.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-22T06:55:12.498Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-11-22T06:55:12.498Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "EasterEggsActions.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\EasterEggs\\EasterEggsActions.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\EasterEggs\\EasterEggsActions.cs",
@@ -68,7 +84,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "InputKeysReaderWithChecker.cs",
               "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
