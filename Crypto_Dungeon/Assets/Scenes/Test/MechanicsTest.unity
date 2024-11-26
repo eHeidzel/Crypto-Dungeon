@@ -605,6 +605,16 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1418430379 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7917623364470133859, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+  m_PrefabInstance: {fileID: 5510359474508515633}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1617656147 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7149996590432307501, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+  m_PrefabInstance: {fileID: 5510359474508515633}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1880188189
 GameObject:
   m_ObjectHideFlags: 0
@@ -654,6 +664,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Message: hey
+--- !u!114 &2122753946 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1445546025062633933, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+  m_PrefabInstance: {fileID: 5510359474508515633}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75914dec391ad8459741c5d8576e602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5510359474508515633
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -666,6 +687,42 @@ PrefabInstance:
       propertyPath: _cipher
       value: 
       objectReference: {fileID: 1880188191}
+    - target: {fileID: 2042147003186701723, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: _hintBtn
+      value: 
+      objectReference: {fileID: 1617656147}
+    - target: {fileID: 2042147003186701723, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: _hintScreen
+      value: 
+      objectReference: {fileID: 1418430379}
+    - target: {fileID: 2105542481840980836, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105542481840980836, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105542481840980836, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2122753946}
+    - target: {fileID: 2105542481840980836, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105542481840980836, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ShowHint
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105542481840980836, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: DecodeScreenButtonOperation, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 2105542481840980836, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3813402366832964021, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -745,6 +802,10 @@ PrefabInstance:
     - target: {fileID: 3813402366832964021, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7149996590432307501, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
+      propertyPath: m_Name
+      value: HintBtn
       objectReference: {fileID: 0}
     - target: {fileID: 8307698895796230272, guid: 99ee3d4f0b562b04db19d1aa0f7f6221, type: 3}
       propertyPath: m_Name

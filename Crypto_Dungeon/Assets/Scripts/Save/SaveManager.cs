@@ -1,11 +1,11 @@
 ﻿using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 
 namespace Assets.Scripts.Save
 {
     internal class SaveManager
     {
-        private const string FILENAME = "save";
         private const string DEFAULT_IP_ADDRESS = "127.0.0.1";
         private const string DEFAULT_IP_PORT = "8000";
 
@@ -41,6 +41,8 @@ namespace Assets.Scripts.Save
             }
         }
 
+        public Localization Localization;
+
         private List<PlayerScriptableObject> _players;
         public List<PlayerScriptableObject> Players
         {
@@ -70,12 +72,12 @@ namespace Assets.Scripts.Save
 
         public static SaveManager GetLatestSave()
         {
-            DataSerializer.TryLoad(FILENAME, out SaveManager save);
+            SavesSerializer.TryLoad(Paths.SAVES_FILENAME, out SaveManager save);
 
             return save;
         }
 
-        public void Save() => DataSerializer.Save(this, FILENAME);
+        public void Save() => SavesSerializer.Save(this, Paths.SAVES_FILENAME);
 
         private void SetErrorState(string message)
         {

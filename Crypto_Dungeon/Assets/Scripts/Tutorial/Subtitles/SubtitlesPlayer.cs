@@ -1,3 +1,4 @@
+using Assets;
 using System.Collections;
 using System.IO;
 using TMPro;
@@ -5,19 +6,15 @@ using UnityEngine;
 
 public class SubtitlesPlayer : MonoBehaviour
 {
-    private readonly char sep = Path.DirectorySeparatorChar;
-
     [SerializeField] private string filename;
     [SerializeField] private SubtitilesType type;
     [SerializeField] private TextMeshProUGUI subtitlesText;
-
-    private string fullPath { get => $"{Application.streamingAssetsPath}{sep}Subtitles{sep}{type}{sep}{filename}.txt"; }
     
     private Subtitle[] subtitles;
 
     private void Start()
     {
-        subtitles = ReadSubtitles(fullPath);
+        subtitles = ReadSubtitles(Paths.GetSubtitlesPath(filename, type));
         StartCoroutine(ShowSubtitle());
     }
 
@@ -41,10 +38,5 @@ public class SubtitlesPlayer : MonoBehaviour
             subtitles[i] = new Subtitle(lines[i]);
 
         return subtitles;
-    }
-
-    public enum SubtitilesType
-    {
-        Tutorial
     }
 }

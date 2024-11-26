@@ -1,3 +1,4 @@
+using Assets;
 using System.Collections;
 using System.Collections.Generic;
 using System.IO;
@@ -7,9 +8,6 @@ using UnityEngine.UI;
 
 public class TitlesPlayer : MonoBehaviour
 {
-    private readonly char sep = Path.DirectorySeparatorChar;
-
-    private string fullPath { get => $"{Application.streamingAssetsPath}{sep}Titles.txt"; }
     private Title[] _titles;
     [SerializeField] private GameObject _textPrefab;
 
@@ -32,7 +30,7 @@ public class TitlesPlayer : MonoBehaviour
         _scrollValue = 1  / _scrollTimes;
         fonts[FontType.Chapter] = ChapterFont;
         fonts[FontType.Author] = AuthorFont;
-        _titles = ReadTitles(fullPath);
+        _titles = ReadTitles(Paths.GetTitlesPath());
         InstantiateTitles(_titles);
         StartCoroutine(ShowCredits());
     }

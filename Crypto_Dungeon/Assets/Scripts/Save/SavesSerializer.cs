@@ -1,25 +1,17 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using Newtonsoft.Json;
 
 namespace Assets.Scripts.Save
 {
-    internal class DataSerializer
+    internal class SavesSerializer
     {
-        public static string BaseDir
-        {
-            get => 
-                $"{Environment.GetFolderPath(Environment.SpecialFolder.UserProfile)}" +
-                $"{Path.DirectorySeparatorChar}.cryptoDungeon";
-        }
-
         public static bool TryLoad<T>(string filename, out T result)
         {
-            EnsureCreateDirectory(BaseDir);
+            EnsureCreateDirectory(Paths.BaseSavesDir);
 
             result = default;
 
-            string fullpath = ConstructFullPath(filename);
+            string fullpath = Paths.GetSaveFileFullPathByName(filename);
             if (!File.Exists(fullpath))
                 return false;
 
@@ -31,10 +23,10 @@ namespace Assets.Scripts.Save
 
         public static void Save<T>(T obj, string filename)
         {
-            EnsureCreateDirectory(BaseDir);
+            EnsureCreateDirectory(Paths.BaseSavesDir);
 
             string JSON = JsonConvert.SerializeObject(obj, Formatting.Indented);
-            File.WriteAllText(ConstructFullPath(filename), JSON);
+            File.WriteAllText(Paths.GetSaveFileFullPathByName(filename), JSON);
         }
 
         private static void EnsureCreateDirectory(string directory)
@@ -42,7 +34,5 @@ namespace Assets.Scripts.Save
             if (!Directory.Exists(directory))
                 Directory.CreateDirectory(directory);
         }
-
-        private static string ConstructFullPath(string filename) => $"{BaseDir}\\{filename}.json";
     }
 }
