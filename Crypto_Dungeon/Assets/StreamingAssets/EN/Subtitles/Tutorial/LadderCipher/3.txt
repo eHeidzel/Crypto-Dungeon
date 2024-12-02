@@ -1,0 +1,4 @@
+However, sometimes the message is long|3000
+or there is no pen with a paper|2000
+at hand to encrypt some word|2000
+|0

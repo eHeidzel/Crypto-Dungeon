@@ -25,7 +25,7 @@ namespace Assets.Scripts.Market
         /// <param name="item"></param>
         public static bool RemoveItem(ShopItem item)
         {
-            if (item.Price > SaveManager.Instance.Balance)
+            if (item.Price > GameSaves.Instance.Balance)
                 return false;
 
             Items.Remove(item);
@@ -46,7 +46,7 @@ namespace Assets.Scripts.Market
             var itemsCopy = Items.ToList();
             var totalPrice = itemsCopy.Sum(item => item.Price);
 
-            if (totalPrice <= SaveManager.Instance.Balance)
+            if (totalPrice <= GameSaves.Instance.Balance)
                 foreach (ShopItem item in itemsCopy)
                     RemoveItem(item);
         }

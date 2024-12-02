@@ -7,12 +7,12 @@ namespace Assets.Scripts.Debug
     {
         public void SaveWithBalanceSet(float newBalance)
         {
-            print(SaveManager.Instance.IP_Address);
-            print(SaveManager.Instance.IP_Port);
-            SaveManager.Instance.Balance = newBalance;
-            SaveManager.Instance.Save();
-            print(SaveManager.Instance.IP_Address);
-            print(SaveManager.Instance.IP_Port);
+            print(GameSaves.Instance.IP_Address);
+            print(GameSaves.Instance.IP_Port);
+            GameSaves.Instance.Balance = newBalance;
+            GameSaves.Instance.Save();
+            print(GameSaves.Instance.IP_Address);
+            print(GameSaves.Instance.IP_Port);
         }
     }
 }

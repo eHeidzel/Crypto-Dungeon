@@ -24,7 +24,7 @@ public class Shop : MonoBehaviour
 
     public void UpdateMarket()
     {
-        _moneyText.text = SaveManager.Instance.Balance.ToString();
+        _moneyText.text = GameSaves.Instance.Balance.ToString();
         UpdateItems();
         UpdateBasket();
     }

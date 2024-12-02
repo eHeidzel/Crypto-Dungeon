@@ -1,0 +1,6 @@
+Here is an example of encoding the word hello|3500
+As you can see here, we wrote|2500
+spell the word hello letter by letter|2000
+then added the key letter number|3000
+and received the encrypted letter|3000
+|0

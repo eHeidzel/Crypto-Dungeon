@@ -27,3 +27,13 @@ public enum SubtitilesType
 {
     Tutorial
 }
+
+public enum CipherType
+{
+    CaesarWithKeyCipher,
+    CaesarCipher,
+    LadderCipher,
+    ReverseCipher,
+    SkitalaCipher,
+    VigenereCipher
+}

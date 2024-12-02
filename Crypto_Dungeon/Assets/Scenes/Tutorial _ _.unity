@@ -264,7 +264,7 @@ Canvas:
   m_GameObject: {fileID: 113386277}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -394,6 +394,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1175831225}
     m_Modifications:
+    - target: {fileID: 624079531771017177, guid: 1214d4cebb4c863408032bd9205f47a4, type: 3}
+      propertyPath: subtitlesPlayer
+      value: 
+      objectReference: {fileID: 746738795}
+    - target: {fileID: 624079531771017177, guid: 1214d4cebb4c863408032bd9205f47a4, type: 3}
+      propertyPath: presentationName
+      value: ReverseCipher
+      objectReference: {fileID: 0}
     - target: {fileID: 780212856264250885, guid: 1214d4cebb4c863408032bd9205f47a4, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -804,9 +812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5713c8518e9a4f54c93d011888c1b276, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filename: TurorialSubtitles
-  type: 0
   subtitlesText: {fileID: 1649089638}
+  _filename: 
+  _type: 0
 --- !u!224 &830416274 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4624228215864475528, guid: 1214d4cebb4c863408032bd9205f47a4, type: 3}
@@ -1056,13 +1064,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1144037956}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.15358612, y: -0, z: -0, w: 0.9881353}
-  m_LocalPosition: {x: 0, y: 4.59, z: -2.94}
+  m_LocalRotation: {x: 0.07819814, y: 0, z: 0, w: 0.9969379}
+  m_LocalPosition: {x: 0, y: 2.9, z: 0.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 17.67, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 8.97, y: 0, z: 0}
 --- !u!1 &1175831224
 GameObject:
   m_ObjectHideFlags: 0

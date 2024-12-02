@@ -6,31 +6,53 @@ using UnityEngine;
 
 public class SubtitlesPlayer : MonoBehaviour
 {
-    [SerializeField] private string filename;
-    [SerializeField] private SubtitilesType type;
     [SerializeField] private TextMeshProUGUI subtitlesText;
-    
-    private Subtitle[] subtitles;
 
-    private void Start()
+    [Header("Use if not addicted to another script")]
+    [SerializeField] private string _filename;
+    [SerializeField] private SubtitilesType _type;
+
+    private Subtitle[] subtitles;
+    private Coroutine runningSubtitlesCoroutine;
+
+    public void SetConfigPath(string filename, SubtitilesType type)
     {
-        subtitles = ReadSubtitles(Paths.GetSubtitlesPath(filename, type));
-        StartCoroutine(ShowSubtitle());
+        _filename = filename;
+        _type = type;
+    }
+
+    public void ShowSubtitles(int index = 0)
+    {
+        StopSubtitles();
+
+        subtitles = ReadSubtitles(Paths.GetSubtitlesPath(_filename, _type, index));
+        runningSubtitlesCoroutine = StartCoroutine(ShowSubtitle());
+    }
+
+    private void StopSubtitles() {
+        if (runningSubtitlesCoroutine != null)
+            StopCoroutine(runningSubtitlesCoroutine);
     }
 
     private IEnumerator ShowSubtitle(int index = 0)
     {
-        Subtitle subtitle = subtitles[index];
+        if (subtitles != null)
+        {
+            Subtitle subtitle = subtitles[index];
 
-        subtitlesText.text = subtitle.Text;
-        yield return new WaitForSeconds(subtitle.DurationInMilliseconds / 1000);
+            subtitlesText.text = subtitle.Text;
+            yield return new WaitForSeconds(subtitle.DurationInMilliseconds / 1000);
 
-        if (++index < subtitles.Length)
-            StartCoroutine(ShowSubtitle(index));
+            if (++index < subtitles.Length)
+                runningSubtitlesCoroutine = StartCoroutine(ShowSubtitle(index));
+        }
     }
 
     private Subtitle[] ReadSubtitles(string path)
     {
+        if (!File.Exists(path))
+            return null;
+
         string[] lines = File.ReadAllLines(path);
         Subtitle[] subtitles = new Subtitle[lines.Length];
 

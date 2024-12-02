@@ -28,7 +28,7 @@ namespace Assets.Scripts.Market.Items
 
         private static void WriteOffFunds(ShopItem item)
         {
-            SaveManager.Instance.Balance -= item.Price;
+            GameSaves.Instance.Balance -= item.Price;
         }
 
         public static void OnBoughtOnceItemBasketDecline(ShopItem item)
