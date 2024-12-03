@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\tutorial\\tutorialcamerarotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorial\\tutorialcamerarotation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\items\\shopitemsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\items\\shopitemsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\tutorial\\slider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorial\\slider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\mechanics\\decodescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mechanics\\decodescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\save\\gamesaves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\save\\gamesaves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\input\\inputkeysreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\input\\inputkeysreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\paths.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\tutorial\\subtitles\\subtitlesplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorial\\subtitles\\subtitlesplayer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\buttonsoperations\\computerbuttonoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonsoperations\\computerbuttonoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -99,76 +95,67 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "TutorialCameraRotation.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\TutorialCameraRotation.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Tutorial\\TutorialCameraRotation.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\TutorialCameraRotation.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Tutorial\\TutorialCameraRotation.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAACIAAABcAAAA",
+              "Title": "ShopItemsActions.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T06:30:14.166Z",
+              "WhenOpened": "2024-12-03T09:25:24.17Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "SubtitlesPlayer.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\Subtitles\\SubtitlesPlayer.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Tutorial\\Subtitles\\SubtitlesPlayer.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\Subtitles\\SubtitlesPlayer.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Tutorial\\Subtitles\\SubtitlesPlayer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACYAAAAeAAAA",
+              "DocumentIndex": 1,
+              "Title": "Basket.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Basket.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Basket.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Basket.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Market\\Basket.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAADIAAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T08:31:32.864Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Paths.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Paths.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Paths.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Paths.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Paths.cs",
-              "ViewState": "AQIAAAwAAAAAAAAAAAAAABsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T08:26:37.985Z"
+              "WhenOpened": "2024-12-03T09:24:41.07Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "InputKeysReader.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "ViewState": "AQIAAFgAAAAAAAAAAAAswGkAAAA2AAAA",
+              "Title": "Shop.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Shop.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Shop.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Shop.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Market\\Shop.cs",
+              "ViewState": "AQIAADkAAAAAAAAAAAAAAE0AAAASAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-02T07:35:02.933Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Slider.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\Slider.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Tutorial\\Slider.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\Slider.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Tutorial\\Slider.cs",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAAAD8AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T07:00:31.293Z",
+              "WhenOpened": "2024-12-03T09:24:23.169Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "DecodeScreen.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADUAAABKAAAA",
+              "Title": "GameSaves.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Save\\GameSaves.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Save\\GameSaves.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Save\\GameSaves.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Save\\GameSaves.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC4AAAA+AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T07:50:04.595Z"
+              "WhenOpened": "2024-12-03T09:10:40.886Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ComputerButtonOperations.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
+              "RelativeToolTip": "Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-03T08:39:49.008Z",
+              "EditorCaption": ""
             }
           ]
         }

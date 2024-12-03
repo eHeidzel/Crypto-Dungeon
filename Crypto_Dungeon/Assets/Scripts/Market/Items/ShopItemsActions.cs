@@ -18,12 +18,16 @@ namespace Assets.Scripts.Market.Items
         {
             WriteOffFunds(item);
             item.IncBoughtCount();
+
+            GameSaves.Instance.Save();
         }
 
         public static void OnBoughtManyItemBuy(ShopItem item)
         {
             WriteOffFunds(item);
             item.IncBoughtCount();
+
+            GameSaves.Instance.Save();
         }
 
         private static void WriteOffFunds(ShopItem item)

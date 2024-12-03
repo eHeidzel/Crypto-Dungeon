@@ -31,7 +31,6 @@ public class Slider : MonoBehaviour
 
     private void Start()
     {
-        GameSaves.PresentedCipher = CipherType.VigenereCipher;
         _cipherForPresentation = GameSaves.PresentedCipher;
         _slides = ReadSlides(_cipherForPresentation.ToString());
         subtitlesPlayer.SetConfigPath(_cipherForPresentation.ToString(), SubtitilesType.Tutorial);
