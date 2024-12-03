@@ -1,0 +1,6 @@
+For encryption we take|2000
+the number of each letter and add it up|3000
+selected shift|2000
+Let's do this for each letter and|2000
+receives ciphertext|2000
+|0

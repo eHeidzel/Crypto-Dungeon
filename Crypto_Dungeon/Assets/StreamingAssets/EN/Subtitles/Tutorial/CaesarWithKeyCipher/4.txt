@@ -1,0 +1,18 @@
+However, this often happens,|2000
+that the message is longer than the key|2000
+In this case, the key must be repeated,|3000
+until its length moans the same|3000
+as message length|1500
+For example:|2000
+Hello is not enough for a message|3000
+boba key,|2000
+since it has 4 letters,|2000
+but you need to encode 5|2000
+So that the length matches we|3000
+start repeating the key|2000
+boba(4) + b(1) = bobab(5 letters)|2000
+Another example|2000
+The word cryptography (12 letters) - message|2000
+boba(4) - key|2000
+boba(4) + bobaboba(8) = bobabobaboba(12 letters)|4000
+|0

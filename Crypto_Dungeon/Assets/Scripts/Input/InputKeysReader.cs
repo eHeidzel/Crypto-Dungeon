@@ -1,19 +1,22 @@
 using System;
 using System.Collections;
 using System.Diagnostics;
-using System.Text;
 using UnityEngine;
 
 public class InputKeysReader : MonoBehaviour
 {
+    public string Text { get => _text.ToString(); }
+
     private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
 
     [SerializeField] private bool _isNeedToClear;
     [SerializeField] private float _clearCheckDelayInMilliseconds;
     [SerializeField] private float _maxUpdateTimeBeforeClearInMilliseconds;
 
+    protected Action _afterUpdate;
+    protected string _text = "";
+    private string _previousText = "";
     private Stopwatch _stopwatch = new Stopwatch();
-    protected StringBuilder _text = new StringBuilder();
 
     protected void Start()
     {
@@ -32,12 +35,15 @@ public class InputKeysReader : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
+            _previousText = _text;
+
             foreach (KeyCode keyCode in keyCodes)
             {
                 if (Input.GetKeyDown(keyCode))
                 {
                     if (keyCode == KeyCode.Backspace)
                         RemoveLastSym();
+
                     var key = GetAlphabetSymbolFromKeyCode(keyCode);
 
                     if (key != null)
@@ -46,6 +52,8 @@ public class InputKeysReader : MonoBehaviour
             }
         }
     }
+
+    private bool IsUpdated() => _text.ToString() == _previousText;
 
     private void ResetTimer()
     {
@@ -57,9 +65,9 @@ public class InputKeysReader : MonoBehaviour
     {
         if (_text.Length > 0)
         {
-            _text.Remove(_text.Length - 1, 1);
+            _text = _text.Remove(_text.Length - 1, 1);
             ResetTimer();
-            print(_text);
+            _afterUpdate?.Invoke();
             return;
         }
     }
@@ -68,8 +76,9 @@ public class InputKeysReader : MonoBehaviour
     {
         ResetTimer();
 
-        _text.Append(key);
-        print(_text);
+        _text += key;
+
+        _afterUpdate?.Invoke();
     }
 
     private char? GetAlphabetSymbolFromKeyCode(KeyCode keyCode)
@@ -88,10 +97,14 @@ public class InputKeysReader : MonoBehaviour
     {
         yield return new WaitForSeconds(_clearCheckDelayInMilliseconds / 1000);
 
-
         if(_stopwatch.ElapsedMilliseconds >= _maxUpdateTimeBeforeClearInMilliseconds)
-            _text.Clear();
+        {
+            _text = "";
+            _afterUpdate?.Invoke();
+        }
 
         StartCoroutine(ClearReadedTextIfNotUpdated());
     }
+
+    public void SetAfterUpdateEvent(Action action) => _afterUpdate = action;
 }

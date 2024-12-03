@@ -1,0 +1,5 @@
+To encode a message you need|2500
+add each letter of the message with|2000
+corresponding key letter|2000
+the resulting letter will be the ciphertext letter|3000
+|0

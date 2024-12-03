@@ -1,0 +1,4 @@
+In a Caesar cipher with a key, the length of the encoded message is|3500
+equal to the length of the original message|2000
+To decode it you need a key|2000
+|0

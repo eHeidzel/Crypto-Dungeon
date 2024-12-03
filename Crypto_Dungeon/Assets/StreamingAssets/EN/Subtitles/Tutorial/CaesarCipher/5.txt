@@ -1,0 +1,10 @@
+Let's encrypt the word hello|2500
+with an shift of 2|2000
+To do this, let's|1500
+write down the letters and their numbers|3500
+Afterwards, sum the numbers with the shift,|3500
+get the encrypted letters|2000
+That's it, the message is encrypted|2000
+To decrypt a message you need|2500
+do the same in reverse order|2500
+|0

@@ -36,8 +36,8 @@ public class CiphersLogTest : MonoBehaviour
     public void Test(Cipher cipher)
     {
         print($"\nИсходный текст: {cipher.Message} " +
-        $"Шифротекст: {cipher.CipherText} " +
-        $"Дешифрованный шифротекст: {cipher.Decode(cipher.CipherText)}");
+        $"Шифротекст: {cipher.EncodedText} " +
+        $"Дешифрованный шифротекст: {cipher.Decode(cipher.EncodedText)}");
     }
 
     public void CaesarTestRU()
@@ -67,13 +67,13 @@ public class CiphersLogTest : MonoBehaviour
     public void VegeneraRU()
     {
         print("\nШифр Веженера на русском");
-        Test(new VegenereCipher(messageRU, Alphabet.RU, keyRU));
+        Test(new VigenereCipher(messageRU, Alphabet.RU, keyRU));
     }
 
     public void VegeneraEN()
     {
         print("\nШифр Веженера на английском");
-        Test(new VegenereCipher(messageEN, Alphabet.EN, keyEN));
+        Test(new VigenereCipher(messageEN, Alphabet.EN, keyEN));
     }
 
     public void ReverseTest(string message)
