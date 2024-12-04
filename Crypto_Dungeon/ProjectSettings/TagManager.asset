@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Items
+  - Computer
+  - FullDecodeMechineTarget
+  - MiniGameDecodeMechineTarget
   layers:
   - Default
   - TransparentFX

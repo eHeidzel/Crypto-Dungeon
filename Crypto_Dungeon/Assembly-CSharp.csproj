@@ -61,13 +61,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Timers\TimeConverter.cs" />
+    <Compile Include="Assets\Scripts\Player\Raycast.cs" />
     <Compile Include="Assets\Scripts\Market\Items\BasketItem.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextEventHandler.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ChooseSlot.cs" />
     <Compile Include="Assets\Scripts\Market\Basket.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PickUp.cs" />
     <Compile Include="Assets\Scripts\ButtonsOperations\ShopButtonOperations.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeA.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_ExampleScript_01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMPro_InstructionOverlay.cs" />
+    <Compile Include="Assets\Scripts\Player\Movement.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexShakeB.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\DropdownSample.cs" />
     <Compile Include="Assets\Scripts\Market\Items\ShopItem.cs" />
@@ -76,15 +80,18 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\EnvMapAnimator.cs" />
     <Compile Include="Assets\Scripts\PlayerScriptableObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextSelector_A.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Inventory.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\SimpleScript.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark04.cs" />
     <Compile Include="Assets\Scripts\EasterEggs\EasterEggsActions.cs" />
+    <Compile Include="Assets\Scripts\DrawImages.cs" />
     <Compile Include="Assets\Scripts\Enums.cs" />
     <Compile Include="Assets\Scripts\ButtonsOperations\DecodeScreenButtonOperation.cs" />
     <Compile Include="Assets\Scripts\Ciphers\CaesarsWithKeyСipher.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ChatController.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\ObjectSpin.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Slot.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_PhoneNumberValidator.cs" />
     <Compile Include="Assets\Scripts\Paths.cs" />
     <Compile Include="Assets\Scripts\Ciphers\LadderCipher.cs" />
@@ -93,6 +100,7 @@
     <Compile Include="Assets\Scripts\Ciphers\Additional\Cipher.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_FrameRateCounter.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TextConsoleSimulator.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Tutorial\Subtitles\SubtitlesPlayer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TeleType.cs" />
     <Compile Include="Assets\Scripts\Tutorial\Subtitles\Subtitle.cs" />
@@ -125,9 +133,12 @@
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Tutorial\Slider.cs" />
     <Compile Include="Assets\Scripts\Timers\LoadingTimer.cs" />
+    <Compile Include="Assets\Scripts\ButtonsOperations\GameMenuButtonOperations.cs" />
     <Compile Include="Assets\Scripts\Save\SavesSerializer.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark03.cs" />
     <Compile Include="Assets\Scripts\Ciphers\Additional\AlphabetManager.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerInteracts.cs" />
+    <Compile Include="Assets\Scripts\Inventory\Items.cs" />
     <Compile Include="Assets\Scripts\Input\InputKeysReader.cs" />
     <Compile Include="Assets\Scripts\TextConverter.cs" />
     <Compile Include="Assets\Scripts\Ciphers\Additional\Helper.cs" />
@@ -135,7 +146,6 @@
     <Compile Include="Assets\Scripts\Save\GameSaves.cs" />
     <Compile Include="Assets\Scripts\Ciphers\VigenereCipher.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
-    <Compile Include="Assets\Scripts\_MainMenu.cs" />
     <Compile Include="Assets\Scripts\Input\InputKeysReaderWithChecker.cs" />
     <Compile Include="Assets\Scripts\Market\Items\ShopItemsActions.cs" />
   </ItemGroup>

@@ -9,6 +9,11 @@ public class ComputerButtonOperations : MonoBehaviour
     [SerializeField] GameObject menu;
     [SerializeField] GameObject tutorial;
 
+    private void OnEnable()
+    {
+        Cursor.visible = true;
+    }
+
     public void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
@@ -52,8 +57,13 @@ public class ComputerButtonOperations : MonoBehaviour
         ShowMenu();
     }
 
+    //TODO переписать на поиск компонента конкретно того пользователя, который пользуется компьютером
     public void Return()
     {
         computer.SetActive(false);
+        foreach (var item in Transform.FindObjectsByType<Movement>(FindObjectsSortMode.None))
+            item.enabled = true;
+
+        Cursor.visible = false;
     }
 }

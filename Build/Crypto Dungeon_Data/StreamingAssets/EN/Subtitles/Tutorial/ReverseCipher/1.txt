@@ -1,0 +1,10 @@
+The reverse cipher is|2500
+the simplest of ciphers|2000
+Its essence is that it|2000
+turns the word backwards|2500
+For example, the word hello becomes|2500
+olleh|1000
+On the next slides you can|1500
+see the encryption process|1500
+from start to finish|1500
+|0

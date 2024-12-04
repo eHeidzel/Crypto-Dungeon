@@ -1,0 +1,3 @@
+In the implementation of the mini-game, not all letters have meaning|4500
+Only one line is deciphered in the skitala!|4500
+|0

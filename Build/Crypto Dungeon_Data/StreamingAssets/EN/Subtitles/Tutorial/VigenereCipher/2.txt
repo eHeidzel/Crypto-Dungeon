@@ -1,0 +1,7 @@
+To encode something with this cipher,|3000
+you need to have table|2000
+This table contains alphabets from|3000
+all possible offsets|2000
+This is somewhat reminiscent of the Caesar cipher,|3500
+however, the structure is a little more complicated|3500
+|0

@@ -1,0 +1,3 @@
+The Scytala code depends on the diameter|2500
+and number of sides of the wand|2000
+|0

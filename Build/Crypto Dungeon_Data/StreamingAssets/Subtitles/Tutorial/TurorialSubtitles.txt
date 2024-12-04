@@ -1,5 +1,0 @@
-hello 1000
-my 2000
-name 1000
-is 4000
-Eugene 5000
