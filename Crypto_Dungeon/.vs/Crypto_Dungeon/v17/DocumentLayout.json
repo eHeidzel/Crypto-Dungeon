@@ -3,24 +3,8 @@
   "WorkspaceRootPath": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\items\\shopitemsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\items\\shopitemsactions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\save\\gamesaves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\save\\gamesaves.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\buttonsoperations\\computerbuttonoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\buttonsoperations\\computerbuttonoperations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\tutorial\\slider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\tutorial\\slider.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -95,66 +79,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ShopItemsActions.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Market\\Items\\ShopItemsActions.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAtAAAA",
+              "Title": "Slider.cs",
+              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\Slider.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Tutorial\\Slider.cs",
+              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Tutorial\\Slider.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Tutorial\\Slider.cs",
+              "ViewState": "AQIAACcAAAAAAAAAAAAAAC0AAAAiAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:25:24.17Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Basket.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Basket.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Basket.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Basket.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Market\\Basket.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADIAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:24:41.07Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Shop.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Shop.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Shop.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Shop.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Market\\Shop.cs",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAE0AAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:24:23.169Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "GameSaves.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Save\\GameSaves.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Save\\GameSaves.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Save\\GameSaves.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Save\\GameSaves.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAAAAC4AAAA+AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T09:10:40.886Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ComputerButtonOperations.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
-              "RelativeToolTip": "Assets\\Scripts\\ButtonsOperations\\ComputerButtonOperations.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAsAAAAYAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-03T08:39:49.008Z",
+              "WhenOpened": "2024-12-04T08:47:00.868Z",
               "EditorCaption": ""
             }
           ]

@@ -3,12 +3,14 @@ using Assets.Scripts.Save;
 using System.IO;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Slider : MonoBehaviour
 {
     [SerializeField] private Image _slideImage;
     [SerializeField] private SubtitlesPlayer subtitlesPlayer;
+    [SerializeField] private string _sceneToLoadAfterPresentation;
     
     private CipherType _cipherForPresentation;
     private Sprite[] _slides;
@@ -39,10 +41,15 @@ public class Slider : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && slideIndex != _maxIndex)
+        if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            slideIndex++;
-            ShowSprite(slideIndex);
+            if (slideIndex == _maxIndex)
+                SceneManager.LoadScene(_sceneToLoadAfterPresentation);
+            else
+            {
+                slideIndex++;
+                ShowSprite(slideIndex);
+            }
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow) && slideIndex != 0)
         {
