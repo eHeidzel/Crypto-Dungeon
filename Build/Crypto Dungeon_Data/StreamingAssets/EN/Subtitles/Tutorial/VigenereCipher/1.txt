@@ -1,7 +1,0 @@
-The Vigenère cipher is the first cipher,|3000
-in which in encoded form|2500
-different letters can be|2000
-encoded the same|1500
-This is caused by|1500
-the cipher devices themselves|2500
-|0

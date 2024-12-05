@@ -1,6 +1,0 @@
-In a real cipher,|1500
-every letter has a meaning|2000
-A strip of paper is wound around a rod|2500
-of different diameters|2000
-and written horizontally for encryption|2500
-|0

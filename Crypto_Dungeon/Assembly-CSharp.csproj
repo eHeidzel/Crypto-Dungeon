@@ -113,6 +113,7 @@
     <Compile Include="Assets\Scripts\TitlesPlayer.cs" />
     <Compile Include="Assets\Scripts\Market\ScriptableObjects\ShopItemScriptableObject.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\VertexZoom.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\Decoders\Decoder.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
     <Compile Include="Assets\Scripts\Debug\ButtonOperation\DebugCiphersButtonOperations.cs" />
     <Compile Include="Assets\Scripts\Save\DataValidator.cs" />
@@ -141,10 +142,13 @@
     <Compile Include="Assets\Scripts\Inventory\Items.cs" />
     <Compile Include="Assets\Scripts\Input\InputKeysReader.cs" />
     <Compile Include="Assets\Scripts\TextConverter.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\Paper.cs" />
     <Compile Include="Assets\Scripts\Ciphers\Additional\Helper.cs" />
     <Compile Include="Assets\Scripts\Market\ScriptableObjects\ShopScriptableObject.cs" />
+    <Compile Include="Assets\Scripts\Mechanics\Decoders\AutoDecoder.cs" />
     <Compile Include="Assets\Scripts\Save\GameSaves.cs" />
     <Compile Include="Assets\Scripts\Ciphers\VigenereCipher.cs" />
+    <Compile Include="Assets\Scripts\Random\RandomCipherGenerator.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\TMP_TextInfoDebugTool.cs" />
     <Compile Include="Assets\Scripts\Input\InputKeysReaderWithChecker.cs" />
     <Compile Include="Assets\Scripts\Market\Items\ShopItemsActions.cs" />

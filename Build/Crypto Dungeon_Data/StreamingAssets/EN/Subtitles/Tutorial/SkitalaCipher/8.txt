@@ -1,3 +1,0 @@
-For example, if the offset is 1|2000
-then you need to take every second letter|2000
-|0

@@ -1,9 +1,0 @@
-Just like in the Caesar cipher with key|2500
-it may be that the key is less than message|3000
-In this case it is necessary to duplicate the key,|3500
-until its length reaches|2000
-message length|1500
-For example, for the message hello|2000
-and the key is biba|3000
-The final key will be bibab|2000
-|0

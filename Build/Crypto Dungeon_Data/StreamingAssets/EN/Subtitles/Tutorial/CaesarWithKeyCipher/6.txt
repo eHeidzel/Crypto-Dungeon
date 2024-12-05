@@ -1,6 +1,0 @@
-As in the usual Caesar cipher,|2000
-if the result of adding the letter numbers and|3000
-letters of the key are greater than|2500
-the length of the alphabet,|3000
-then we start counting from the begining|3000
-|0
