@@ -11,9 +11,6 @@ public abstract class Cipher : MonoBehaviour
         Message = message.ToUpper();
     }
 
-    public bool IsAnswerCorrectlyEncoded(string encodedMessage) => EncodedText == encodedMessage;
-    public bool IsAnswerCorrectlyDecoded(string decodedMessage) => Message == decodedMessage;
-
     public abstract string Encode(string message);
     public abstract string Decode(string message);
 }

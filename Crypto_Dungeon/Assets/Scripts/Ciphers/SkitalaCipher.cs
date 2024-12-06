@@ -3,9 +3,9 @@ using System;
 
 public class SkitalaCipher : Cipher
 {
+    public readonly int Shift;
     public readonly Alphabet Alphabet;
     public readonly char[] AlphabetChars;
-    public readonly int Shift;
 
     private Random _random = new Random();
 
