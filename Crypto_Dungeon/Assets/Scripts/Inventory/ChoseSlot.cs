@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ChooseSlot : MonoBehaviour
+public class ChoseSlot : MonoBehaviour
 {
     [SerializeField] public List<Slot> slots;
     
