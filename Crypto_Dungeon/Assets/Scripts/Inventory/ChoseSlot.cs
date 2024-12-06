@@ -2,7 +2,7 @@ using System;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class ChooseSlot : MonoBehaviour
+public class ChoseSlot : MonoBehaviour
 {
     private Inventory inventory;
     //private Slot slot;
