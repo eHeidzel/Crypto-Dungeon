@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Slot : MonoBehaviour
 {
-    private Inventory inventory;
+    public GameObject holdingItem;
     public int id;
     public bool isSelected;
     private Vector3 defaultScale;
@@ -10,12 +10,12 @@ public class Slot : MonoBehaviour
     private void Start()
     {
         defaultScale = transform.localScale;
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
     }
 
     public void IncreaseSize(float mult)
     {
-        transform.parent.localScale *= mult;
+        if (transform.parent.localScale == defaultScale)
+            transform.parent.localScale *= mult;
     }
 
     public void SetDefaultSize()

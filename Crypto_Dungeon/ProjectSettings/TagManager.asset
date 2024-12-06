@@ -8,6 +8,8 @@ TagManager:
   - Computer
   - FullDecodeMechineTarget
   - MiniGameDecodeMechineTarget
+  - Door
+  - Paper
   layers:
   - Default
   - TransparentFX

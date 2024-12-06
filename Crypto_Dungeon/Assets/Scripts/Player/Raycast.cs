@@ -5,6 +5,7 @@ public class Raycast : MonoBehaviour
     [HideInInspector] public GameObject target;
     [HideInInspector] public Items items;
     [HideInInspector] public bool isComputerTarget;
+    [HideInInspector] public bool isDoorTarget;
     [HideInInspector] public bool isFullDecodeMechineTarget;
     [HideInInspector] public bool isMiniGameDecodeMechineTarget;
 
@@ -12,7 +13,6 @@ public class Raycast : MonoBehaviour
 
     public void Update()
     {
-        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Ray ray = Camera.main.ScreenPointToRay(cameraCenterVector);
 
         if (Physics.Raycast(ray, out RaycastHit hit, 1.8f))
@@ -20,6 +20,7 @@ public class Raycast : MonoBehaviour
             target = hit.collider.gameObject;
             items = target.GetComponent<Items>();
 
+            isDoorTarget = target.tag == "Door";
             isFullDecodeMechineTarget = target.tag == "FullDecodeMechineTarget";
             isMiniGameDecodeMechineTarget = target.tag == "MiniGameDecodeMechineTarget";
             isComputerTarget = target.tag == "Computer";

@@ -1,9 +1,0 @@
-Here is an example of encrypting the word hello|3200
-with biba key|1000
-As you can see,|1000
-we wrote out each character|2000
-and found its encrypted version in|3000
-intersection of message letters and key|3500
-Having done this for each letter,|3000
-we get the encrypted text|2500
-|0

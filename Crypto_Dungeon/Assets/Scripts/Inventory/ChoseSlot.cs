@@ -1,28 +1,24 @@
 using System;
-using Unity.VisualScripting;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ChoseSlot : MonoBehaviour
 {
+    [SerializeField] public List<Slot> slots;
+    
     private Inventory inventory;
-    //private Slot slot;
-    [SerializeField] public Slot[] slots;
     private readonly Array keyCodes = Enum.GetValues(typeof(KeyCode));
     public float increase;
-    private KeyCode inputedKey;
 
-    void Start()
+    private void Start()
     {
-        inventory = GameObject.FindGameObjectWithTag("Player").GetComponent<Inventory>();
-        //slot = GetComponent<Slot>();
+        inventory = FindAnyObjectByType<Inventory>();
     }
-
 
     void Update()
     {
         foreach (KeyCode keyCode in keyCodes)
         {
-            inputedKey = keyCode;
             if (Input.GetKeyDown(keyCode))
                 switch (keyCode)
                 {
@@ -45,13 +41,9 @@ public class ChoseSlot : MonoBehaviour
         }
     }
 
-
     public void Increaser(int id)
     {
         Slot chosenSlot = slots[id];
-
-        if (chosenSlot.isSelected)
-            return;
 
         foreach (var slot in slots)
         {
@@ -60,6 +52,9 @@ public class ChoseSlot : MonoBehaviour
         }
 
         chosenSlot.isSelected = true;
+        inventory.selectedSlot = chosenSlot.gameObject;
+        inventory.selectedItem = chosenSlot.holdingItem;
+
         chosenSlot.IncreaseSize(increase);
     }
 }

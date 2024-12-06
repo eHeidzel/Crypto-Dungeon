@@ -1,5 +1,0 @@
-In the Caesar cipher,|2000
-the length of the encoded message is|3000
-equal to message length|2000
-And to encode you need offset|2000
-|0

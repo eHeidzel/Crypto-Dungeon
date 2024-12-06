@@ -5,24 +5,20 @@ using UnityEngine.Events;
 
 public class LoadingTimer : MonoBehaviour
 {
-    [SerializeField] private int _seconds;
+    [SerializeField] public int Seconds { get; private set; }
     [SerializeField] private TextMeshProUGUI text;
     [SerializeField] private Object[] _onLoadingEndArgs;
-    public UnityEvent<Object[]> _onLoadingEnd;
 
-    private void Start()
-    {
-        StartCoroutine(Timer());
-    }
+    public UnityEvent<Object[]> _onLoadingEnd;
+    public bool IsTimerEnd { get => Seconds <= 0; }
 
     private IEnumerator Timer()
     {
-        text.text = TimeConverter.SecondsToLongTimeFormat(_seconds);
-
+        text.text = TimeConverter.SecondsToLongTimeFormat(Seconds);
         yield return new WaitForSeconds(1);
-        _seconds--;
+        Seconds--;
 
-        if (_seconds > 0)
+        if (Seconds >= 0)
             StartCoroutine(Timer());
         else
             _onLoadingEnd.Invoke(_onLoadingEndArgs);
@@ -30,6 +26,8 @@ public class LoadingTimer : MonoBehaviour
 
     public void SetSeconds(int seconds)
     {
-        _seconds = seconds;
+        Seconds = seconds;
+        StopAllCoroutines();
+        StartCoroutine(Timer());
     }
 }

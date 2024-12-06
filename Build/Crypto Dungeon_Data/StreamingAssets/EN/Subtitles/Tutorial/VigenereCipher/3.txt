@@ -1,8 +1,0 @@
-To encode the letter|2000
-in the Vigenère cipher you need|2000
-take message letter as string,|2500
-and the key letter as column|2000
-At the intersection of|1500
-these two letters there will be|3000
-encrypted letter|2000
-|0
