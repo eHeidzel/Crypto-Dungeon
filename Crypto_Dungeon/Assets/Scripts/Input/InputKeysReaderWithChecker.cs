@@ -4,17 +4,19 @@ using UnityEngine.Events;
 
 public class InputKeysReaderWithChecker : InputKeysReader
 {
-    [SerializeField] private string _checkSequence;
     [SerializeField] private bool _isNeedToCutSequence;
     [SerializeField] private float _checkOnSequenceDelayInMilliseconds;
     [SerializeField] private float _cutSequenceDelayInMilliseconds;
     [SerializeField] private Object[] _onSeqFoundArgs;
+    private string _checkSequence = null;
     public UnityEvent<Object[]> _onSeqFound;
+    public bool IsSeqFound { get; private set; }
 
-    private new void Start()
+    public void SetCheckSequence(string seq)
     {
+        base.Restart();
+        _checkSequence = seq;
         _checkSequence = _checkSequence.ToLower();
-        base.Start();
         StartCoroutine(CheckOnSequence());
 
         if (_isNeedToCutSequence)
@@ -39,10 +41,13 @@ public class InputKeysReaderWithChecker : InputKeysReader
         yield return new WaitForSeconds(_checkOnSequenceDelayInMilliseconds / 1000);
 
         if (_text.ToLower() == _checkSequence)
+        {
+            IsSeqFound = true;
             _onSeqFound?.Invoke(_onSeqFoundArgs);
+            StopAllCoroutines();
+            yield break;
+        }
 
         StartCoroutine(CheckOnSequence());
     }
-
-    public void SetCheckSeq(string text) => _checkSequence = text;
 }

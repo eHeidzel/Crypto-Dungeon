@@ -13,13 +13,15 @@ public class DecodeScreen : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _userInputText;
 
     [SerializeField] private InputKeysReaderWithChecker _inputKeysReader;
+    private string mask;
 
-    private void Start()
+    public void SetCipher(Cipher cipher)
     {
-        _inputKeysReader.SetCheckSeq(_cipher.Message);
+        _cipher = cipher;
+
+        _inputKeysReader.SetCheckSequence(_cipher.Message);
 
         InitText();
-        UpdateUserInputText();
         SetHintImage();
         SetHintBtnEvent();
     }
@@ -27,18 +29,22 @@ public class DecodeScreen : MonoBehaviour
     private void InitText()
     {
         _encodedText.text = TextConverter.TextToUnderlinedFormat(_cipher.EncodedText);
+        mask = _cipher.Message;
 
         _inputKeysReader.SetAfterUpdateEvent(() => UpdateUserInputText());
+        UpdateUserInputText();
     }
 
     private void UpdateUserInputText()
     {
-        _userInputText.text = TextConverter.TextToUnderlinedFormat(_inputKeysReader.Text, _encodedText.text);
+        _userInputText.text = TextConverter.TextToUnderlinedFormat(_inputKeysReader.Text, mask);
     }
 
     private void SetHintBtnEvent()
     {
-        _hintBtn.GetComponent<Button>().onClick.AddListener(() => ToggleHintScreen());
+        Button btn = _hintBtn.GetComponent<Button>();
+        btn.onClick.RemoveAllListeners();
+        btn.onClick.AddListener(() => ToggleHintScreen());
     }
 
     private void SetHintImage()

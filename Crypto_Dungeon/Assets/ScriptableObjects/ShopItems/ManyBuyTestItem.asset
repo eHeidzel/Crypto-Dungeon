@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1893ec693d61dda42bf655a632e3e070, type: 3}
   m_Name: ManyBuyTestItem
   m_EditorClassIdentifier: 
-  Name: Magic
-  Description: World
+  Name: "\u041C\u043D\u043E\u0433\u043E\u0440\u0430\u0437\u043E\u0432\u044B\u0439"
+  Description: "\u0414\u0430\u043D\u043D\u044B\u0439 \u043F\u0440\u0435\u0434\u043C\u0435\u0442
+    \u043C\u043E\u0436\u043D\u043E \u043A\u0443\u043F\u0438\u0442\u044C \u0441\u043A\u043E\u043B\u044C\u043A\u043E
+    \u0443\u0433\u043E\u0434\u043D\u043E \u0440\u0430\u0437"
   Price: 100
   MarketCategory: 1
   IsBoughtOnce: 0
-  BoughtCount: 2
-  Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  BoughtCount: 0
+  Sprite: {fileID: 21300000, guid: 1b1af03251a6d3a4fbdf7b7662c871be, type: 3}

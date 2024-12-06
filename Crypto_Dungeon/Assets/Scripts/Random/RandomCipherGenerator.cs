@@ -38,13 +38,12 @@ public class RandomCipherGenerator
     public static Cipher GetRandomCipher()
     {
         int enumLen = Enum.GetValues(typeof(CipherType)).Length;
-        CipherType type = (CipherType)UnityEngine.Random.Range(0, enumLen);
-
+        CipherType type = (CipherType)UnityEngine.Random.Range(2, 5);
         Localization localization = GameSaves.Instance.Localization;
-        Alphabet alphabet = GetAlphabetFromLocalization(localization);
+        Alphabet alphabet = AlphabetManager.GetAlphabetType(localization);
         string message = GetRandomWord();
         string key = GetRandomWord();
-        int shift = UnityEngine.Random.Range(0, AlphabetManager.GetAlphabet(alphabet).Length);
+        int shift = UnityEngine.Random.Range(1, 4);
 
         switch (type)
         {
@@ -60,19 +59,6 @@ public class RandomCipherGenerator
                 return new SkitalaCipher(message, alphabet, shift);
             case CipherType.VigenereCipher:
                 return new VigenereCipher(message, alphabet, key);
-            default:
-                throw new ArgumentException();
-        }
-    }
-
-    private static Alphabet GetAlphabetFromLocalization(Localization localization)
-    {
-        switch (localization)
-        {
-            case Localization.EN:
-                return Alphabet.EN;
-            case Localization.RU:
-                return Alphabet.RU;
             default:
                 throw new ArgumentException();
         }

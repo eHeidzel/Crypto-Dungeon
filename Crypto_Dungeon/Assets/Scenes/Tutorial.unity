@@ -1186,7 +1186,7 @@ MonoBehaviour:
   maxZoomDistance: 4
   smoothSpeed: 0.02
   yMinMaxAngle: 30
-  xMinMaxAngle: 35
+  xMinMaxAngle: 30
   forwardTr: {fileID: 0}
 --- !u!1001 &1171598609
 PrefabInstance:

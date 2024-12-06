@@ -12,6 +12,7 @@ public class ShopItem : Item, IPointerClickHandler, IPointerEnterHandler
     public string Name { get => _characteristics.Name; }
     public string Description { get => _characteristics.Description; }
     public float Price { get => _characteristics.Price; }
+    public Sprite Sprite { get => _characteristics.Sprite; }
 
     public Action<ShopItem> OnBuy { get; private set; }
     public Action<ShopItem> OnDecline { get; private set; }

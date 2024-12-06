@@ -6,7 +6,7 @@ public class Raycast : MonoBehaviour
     [HideInInspector] public Items items;
     [HideInInspector] public bool isComputerTarget;
     [HideInInspector] public bool isDoorTarget;
-    [HideInInspector] public bool isFullDecodeMechineTarget;
+    [HideInInspector] public bool isAutoDecodeMechineTarget;
     [HideInInspector] public bool isMiniGameDecodeMechineTarget;
 
     Vector3 cameraCenterVector = new Vector3(Screen.width / 2, Screen.height / 2, 0);
@@ -21,7 +21,7 @@ public class Raycast : MonoBehaviour
             items = target.GetComponent<Items>();
 
             isDoorTarget = target.tag == "Door";
-            isFullDecodeMechineTarget = target.tag == "FullDecodeMechineTarget";
+            isAutoDecodeMechineTarget = target.tag == "FullDecodeMechineTarget";
             isMiniGameDecodeMechineTarget = target.tag == "MiniGameDecodeMechineTarget";
             isComputerTarget = target.tag == "Computer";
         }

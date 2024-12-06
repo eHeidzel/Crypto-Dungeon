@@ -8,7 +8,7 @@ public abstract class Cipher : MonoBehaviour
 
     public Cipher(string message)
     {
-        Message = message;
+        Message = message.ToUpper();
     }
 
     public bool IsAnswerCorrectlyEncoded(string encodedMessage) => EncodedText == encodedMessage;

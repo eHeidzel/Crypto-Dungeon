@@ -7,9 +7,8 @@ public class AutoDecoder : Decoder
     [SerializeField] private GameObject _loadingScreen;
     [SerializeField] private LoadingTimer timer;
 
-    public bool IsFree { get => timer.IsTimerEnd && Paper == null; }
-    public bool IsDecoded { get => timer.IsTimerEnd && Paper != null; }
-
+    public new bool IsFree { get => timer.IsTimerEnd && Paper == null; }
+    public new bool IsDecodingDone { get => timer.IsTimerEnd && Paper != null; }
 
     public new Items GetAndClearPaper()
     {

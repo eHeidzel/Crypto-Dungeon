@@ -1,3 +1,4 @@
+using Assets.Scripts.Mechanics.Decoders;
 using UnityEngine;
 
 public class PlayerInteracts : MonoBehaviour
@@ -14,15 +15,16 @@ public class PlayerInteracts : MonoBehaviour
 
     private void Update()
     {
+        if (!Input.GetKeyDown(KeyCode.E))
+            return;
+
         ActivateComputerIfNeed();
-        ActivateFullDecodeMachineIfNeed();
+        ProcessDecodeMachine();
         OpenDoorIfNeed();
     }
 
     public void OpenDoorIfNeed()
     {
-        if (!Input.GetKeyDown(KeyCode.E))
-            return;
         if (!_raycast.isDoorTarget)
             return;
 
@@ -31,44 +33,65 @@ public class PlayerInteracts : MonoBehaviour
         animator.SetBool("IsDoorOpen", !isOpen);
     }
 
-    public void ActivateFullDecodeMachineIfNeed()
+    public void ProcessDecodeMachine()
     {
-        if (!Input.GetKeyDown(KeyCode.E))
-            return;
-
-        if (!_raycast.isFullDecodeMechineTarget)
+        if (!(_raycast.isAutoDecodeMechineTarget || _raycast.isMiniGameDecodeMechineTarget))
             return;
 
         var selectedItem = FindAnyObjectByType<Inventory>().selectedItem;
         var paper = selectedItem == null ? null : selectedItem.GetComponentInChildren<Paper>();
-        var decoder = _raycast.target.GetComponentInChildren<AutoDecoder>();
+        Decoder decoder = _raycast.target.GetComponentInChildren<Decoder>();
+
         var pickUp = FindAnyObjectByType<PickUp>();
+
+        if (decoder == null)
+            return;
 
         if (paper != null)
         {
-            if (decoder.IsFree)
+            if (decoder is AutoDecoder autoDecoder)
             {
-                pickUp.RemoveSelectedItem();
-                decoder.PaperObj = selectedItem;
-                decoder.Decode(paper);
+                if (autoDecoder.IsFree)
+                {
+                    pickUp.RemoveSelectedItem();
+                    autoDecoder.PaperObj = selectedItem;
+                    autoDecoder.Decode(paper);
+                    return;
+                }
+            }   
+            else if (decoder is MiniGameDecoder miniGameDecoder)
+            {
+                if (miniGameDecoder.IsFree)
+                {
+                    pickUp.RemoveSelectedItem();
+                    miniGameDecoder.PaperObj = selectedItem;
+                    miniGameDecoder.Decode(paper);
+                    return;
+                }
             }
-            return;
         }
 
-        if (decoder.Paper != null)
+        if (decoder?.Paper != null)
         {
-            if (decoder.IsDecoded)
-                pickUp.AddItem(decoder.GetAndClearPaper(), false);
-        }  
+            if (decoder is AutoDecoder autoDecoder)
+            {
+                if (autoDecoder.IsDecodingDone)
+                    pickUp.AddItem(autoDecoder.GetAndClearPaper(), false);
+            }
+            else if (decoder is MiniGameDecoder miniGameDecoder)
+            {
+                if (miniGameDecoder.IsPaperPickable)
+                    pickUp.AddItem(miniGameDecoder.GetAndClearPaper(), false);
+            }
+        }
     }
 
     public void ActivateComputerIfNeed()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-            if (_raycast.isComputerTarget)
-            {
-                _movement.enabled = false;
-                _computerMenu.SetActive(true);
-            }
+        if (_raycast.isComputerTarget)
+        {
+            _movement.enabled = false;
+            _computerMenu.SetActive(true);
+        }
     }
 }

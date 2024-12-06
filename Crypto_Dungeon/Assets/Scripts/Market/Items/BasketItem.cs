@@ -14,6 +14,8 @@ namespace Assets.Scripts.Market
         public void InitValues(ShopItem item)
         {
             _orderedItem = item;
+
+            transform.GetChild(0).GetComponent<Image>().overrideSprite = item.Sprite;
             var tmps = transform.GetComponentsInChildren<TextMeshProUGUI>();
             tmps[0].text = _orderedItem.Name;
             tmps[1].text = _orderedItem.Price.ToString();

@@ -6,7 +6,8 @@ namespace Assets.Scripts.Mechanics.Decoders
     {
         public Paper Paper { get; protected set; }
         public GameObject PaperObj;
-
+        public bool IsFree { get; }
+        public bool IsPaperPickable { get; }
 
         public Items GetAndClearPaper()
         {

@@ -1,3 +1,5 @@
+using Assets.Scripts.Cyphers;
+using Assets.Scripts.Save;
 using System;
 using System.Collections;
 using System.Diagnostics;
@@ -15,12 +17,14 @@ public class InputKeysReader : MonoBehaviour
 
     protected Action _afterUpdate;
     protected string _text = "";
-    private string _previousText = "";
+    private string _previousText;
     private Stopwatch _stopwatch = new Stopwatch();
 
-    protected void Start()
+    public void Restart()
     {
+        StopAllCoroutines();
         ResetTimer();
+        _text = "";
 
         if (_isNeedToClear)
             StartCoroutine(ClearReadedTextIfNotUpdated());
@@ -53,8 +57,6 @@ public class InputKeysReader : MonoBehaviour
         }
     }
 
-    private bool IsUpdated() => _text.ToString() == _previousText;
-
     private void ResetTimer()
     {
         _stopwatch.Reset();
@@ -83,14 +85,16 @@ public class InputKeysReader : MonoBehaviour
 
     private char? GetAlphabetSymbolFromKeyCode(KeyCode keyCode)
     {
-        if (keyCode >= KeyCode.A && keyCode <= KeyCode.Z)
-        {
-            return Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift) ?
-                   keyCode.ToString()[0] :
-                   char.ToLower(keyCode.ToString()[0]);
-        }
-        else
+        bool isUpper = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
+        Localization localization = GameSaves.Instance.Localization;
+        char? letter = AlphabetManager.ConvertToLetter(keyCode, localization);
+
+        if (letter == null)
             return null;
+
+        return isUpper ?
+               letter :
+               char.ToLower((char)letter);
     }
 
     private IEnumerator ClearReadedTextIfNotUpdated()
