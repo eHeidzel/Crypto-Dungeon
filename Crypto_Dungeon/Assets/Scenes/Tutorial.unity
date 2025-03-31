@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7330868975151318462, guid: 1214d4cebb4c863408032bd9205f47a4, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7919955551977510364, guid: 1214d4cebb4c863408032bd9205f47a4, type: 3}
       propertyPath: m_Name
       value: TutorialScreen
@@ -1089,6 +1093,7 @@ GameObject:
   - component: {fileID: 1144037958}
   - component: {fileID: 1144037957}
   - component: {fileID: 1144037960}
+  - component: {fileID: 1144037961}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1188,6 +1193,19 @@ MonoBehaviour:
   yMinMaxAngle: 30
   xMinMaxAngle: 30
   forwardTr: {fileID: 0}
+--- !u!114 &1144037961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1144037956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profile: {fileID: 11400000, guid: 31305b72c1809f24a8c68d2f048606f2, type: 2}
 --- !u!1001 &1171598609
 PrefabInstance:
   m_ObjectHideFlags: 0

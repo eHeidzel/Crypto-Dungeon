@@ -1,37 +1,49 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\",
+  "WorkspaceRootPath": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\random\\randomciphergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\random\\randomciphergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|d:\\unityprojects\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\ciphers\\additional\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\ciphers\\additional\\cipher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\player\\playerinteracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinteracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|d:\\unityprojects\\crypto-dungeon\\crypto_dungeon\\assets\\graphics\\shaders\\vhs.shader||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\graphics\\shaders\\vhs.shader||{3B902123-F8A7-4915-9F01-361F908088D0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\mechanics\\decoders\\minigamedecoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mechanics\\decoders\\minigamedecoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\input\\inputkeysreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\input\\inputkeysreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\input\\inputkeysreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\mechanics\\decodescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\mechanics\\decodescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mechanics\\decodescreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\items\\basketitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\market\\items\\basketitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\items\\basketitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\market\\items\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\market\\items\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\market\\items\\shopitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|a:\\rep\\crypto-dungeon\\crypto_dungeon\\assets\\scripts\\input\\inputkeysreaderwithchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\random\\randomciphergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\random\\randomciphergenerator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\player\\playerinteracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\player\\playerinteracts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\mechanics\\decoders\\minigamedecoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\mechanics\\decoders\\minigamedecoder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\assets\\scripts\\input\\inputkeysreaderwithchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{9A5FE8FB-7EE8-39FC-96DD-8D16B0E88CB7}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\input\\inputkeysreaderwithchecker.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,171 +54,145 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "RandomCipherGenerator.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACgAAABDAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:55:59.947Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ShopItem.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Items\\ShopItem.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Market\\Items\\ShopItem.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAAA4AAAA8AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:35:07.32Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:3:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:9:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:6:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:11:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:13:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:18:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:21:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:25:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:27:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{57d563b6-44a5-47df-85be-f4199ad6b651}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e5c86464-96be-4d7c-9a8b-abcb3bbf5f92}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "BasketItem.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\BasketItem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Items\\BasketItem.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\BasketItem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Market\\Items\\BasketItem.cs",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAABVAAAA",
+              "DocumentIndex": 0,
+              "Title": "Cipher.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Ciphers\\Additional\\Cipher.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T11:33:38.636Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DecodeScreen.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAABAAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:32:19.753Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "InputKeysReader.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Input\\InputKeysReader.cs",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAAAB0AAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:22:04.555Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MiniGameDecoder.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAawA4AAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-06T09:05:24.223Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "InputKeysReaderWithChecker.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T23:31:46.936Z",
+              "WhenOpened": "2025-03-25T08:59:11.566Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "VHS.shader",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Graphics\\Shaders\\VHS.shader",
+              "RelativeDocumentMoniker": "Assets\\Graphics\\Shaders\\VHS.shader",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Graphics\\Shaders\\VHS.shader",
+              "RelativeToolTip": "Assets\\Graphics\\Shaders\\VHS.shader",
+              "ViewState": "AQIAABIAAAAAAAAAAIBJwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002777|",
+              "WhenOpened": "2025-03-25T08:55:02.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\MainMenu.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\MainMenu.cs",
+              "RelativeToolTip": "Assets\\Scripts\\MainMenu.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-22T19:32:33.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RandomCipherGenerator.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Random\\RandomCipherGenerator.cs",
+              "ViewState": "AQIAACAAAAAAAAAAAAAAwDsAAAArAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T11:55:59.947Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShopItem.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Items\\ShopItem.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\ShopItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Market\\Items\\ShopItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T11:35:07.32Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BasketItem.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\BasketItem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Market\\Items\\BasketItem.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Market\\Items\\BasketItem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Market\\Items\\BasketItem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAuwBEAAABVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T11:33:38.636Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DecodeScreen.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\DecodeScreen.cs",
+              "ViewState": "AQIAACwAAAAAAAAAAAAgwBAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:32:19.753Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "InputKeysReader.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReader.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Input\\InputKeysReader.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReader.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Input\\InputKeysReader.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAG8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:22:04.555Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "MiniGameDecoder.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Mechanics\\Decoders\\MiniGameDecoder.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAawA4AAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-06T09:05:24.223Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "InputKeysReaderWithChecker.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Input\\InputKeysReaderWithChecker.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T23:31:46.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "PlayerInteracts.cs",
-              "DocumentMoniker": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Player\\PlayerInteracts.cs",
+              "DocumentMoniker": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Player\\PlayerInteracts.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Player\\PlayerInteracts.cs",
-              "ToolTip": "A:\\rep\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Player\\PlayerInteracts.cs",
+              "ToolTip": "D:\\UnityProjects\\Crypto-Dungeon\\Crypto_Dungeon\\Assets\\Scripts\\Player\\PlayerInteracts.cs",
               "RelativeToolTip": "Assets\\Scripts\\Player\\PlayerInteracts.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAFIAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T22:22:06.815Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-05T22:22:06.815Z"
             }
           ]
         }
