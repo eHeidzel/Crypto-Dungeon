@@ -3,6 +3,7 @@ Shader "Custom/VHSEffectShader"
     Properties
     {
         _MainTex ("Texture", 2D) = "white" {}
+        _Color ("Color Tint", Color) = (1, 1, 1, 1)
         _ScanLineIntensity ("Scan Line Intensity", Range(0.5, 1)) = 0.5
         _Distortion ("Distortion", Range(0, 0.1)) = 0.004
         _LinesCount ("LinesCount", Range(0, 500)) = 100
@@ -36,6 +37,7 @@ Shader "Custom/VHSEffectShader"
 
             sampler2D _MainTex;
             float4 _MainTex_ST;
+            fixed4 _Color;
             float _ScanLineIntensity;
             float _Distortion;
             float _LinesCount;
@@ -53,6 +55,8 @@ Shader "Custom/VHSEffectShader"
             {
                 float2 offset = float2(0, sin(i.uv.y * 100 + _Time.y * 2) * _Distortion);
                 fixed4 col = tex2D(_MainTex, i.uv + offset);
+
+                col.rgb *= _Color.rgb;
 
                 if (floor(i.uv.y * _LinesCount) % 2 == 0)
                     col.rgb *= _ScanLineIntensity;
