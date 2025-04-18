@@ -187,15 +187,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 33.362
+      value: -29.591473
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 40.671
+      value: 11.640678
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 28.018
+      value: -36.65973
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -203,7 +203,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalRotation.y
@@ -211,7 +211,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 509d78bc546ae384bb7cb1b7dd80ef9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -259,8 +259,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   index: 0
   draws:
-  - {fileID: 21300000, guid: 1b1af03251a6d3a4fbdf7b7662c871be, type: 3}
-  - {fileID: 21300000, guid: 11b6ae2650ca3c940abb6ce617ac05be, type: 3}
+  - {fileID: 21300000, guid: 6815200b8af36254494373204df1e15f, type: 3}
+  - {fileID: 21300000, guid: fcbe39293adcd2c4e8ef16c967414a75, type: 3}
+  - {fileID: 21300000, guid: 5c165a5d43bc1f947a2daed4629a69af, type: 3}
+  - {fileID: 21300000, guid: 1fe9664ee8bfb024d8b2558d26cd381f, type: 3}
+  - {fileID: 21300000, guid: 38cb6edec39b0ae4ab9fe7c1a670ee2c, type: 3}
+  - {fileID: 21300000, guid: df0cd7adb81ab2c40840cbdb3b2a1102, type: 3}
+  - {fileID: 21300000, guid: bf042536c19e45745ba8236d8247852b, type: 3}
+  - {fileID: 21300000, guid: b5ae4f53f177c8b4681e814d4e3491e0, type: 3}
+  - {fileID: 21300000, guid: 449c0da84f4ae3345837205b6b1af96a, type: 3}
+  - {fileID: 21300000, guid: a4b482481c333184387c1916dcf25918, type: 3}
+  - {fileID: 21300000, guid: e0049e5a4efccaf4488d4a50c4ffb154, type: 3}
+  - {fileID: 21300000, guid: 2b353fe123546dd4db08447be8674e3b, type: 3}
   image: {fileID: 8526011462926472862}
 --- !u!4 &8335763914828719891 stripped
 Transform:

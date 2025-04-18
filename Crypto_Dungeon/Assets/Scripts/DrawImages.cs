@@ -9,6 +9,7 @@ public class DrawImages : MonoBehaviour
 
     void Start()
     {
+        index = Random.Range(0, draws.Length);
         image.overrideSprite = draws[index];
     }
 }
