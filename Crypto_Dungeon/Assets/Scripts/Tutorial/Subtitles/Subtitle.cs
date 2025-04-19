@@ -6,9 +6,9 @@
     /// <summary>
     /// Must be in "Text(string)|DurationInMilliseconds(int)" format
     /// </summary>
-    public Subtitle(string subtitileString)
+    public Subtitle(string subtitleString)
     {
-        string[] data = subtitileString.Split('|');
+        string[] data = subtitleString.Split('|');
         Text = data[0];
         DurationInMilliseconds = int.Parse(data[1]);
     }

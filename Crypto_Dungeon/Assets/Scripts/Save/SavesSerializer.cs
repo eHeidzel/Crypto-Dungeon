@@ -11,11 +11,11 @@ namespace Assets.Scripts.Save
 
             result = default;
 
-            string fullpath = Paths.GetSaveFileFullPathByName(filename);
-            if (!File.Exists(fullpath))
+            string fullPath = Paths.GetSaveFileFullPathByName(filename);
+            if (!File.Exists(fullPath))
                 return false;
 
-            string JSON = File.ReadAllText(fullpath);
+            string JSON = File.ReadAllText(fullPath);
             result = JsonConvert.DeserializeObject<T>(JSON);
 
             return true;

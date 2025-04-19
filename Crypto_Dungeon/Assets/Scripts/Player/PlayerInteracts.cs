@@ -6,11 +6,13 @@ public class PlayerInteracts : MonoBehaviour
     [SerializeField] private GameObject _computerMenu;
     private Raycast _raycast;
     private Movement _movement;
+    private Inventory _inventory;
 
     private void Start()
     {
         _movement = GetComponent<Movement>();
         _raycast = GetComponent<Raycast>();
+        _inventory = GetComponent<Inventory>();
     }
 
     private void Update()
@@ -18,80 +20,57 @@ public class PlayerInteracts : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.E))
             return;
 
-        ActivateComputerIfNeed();
-        ProcessDecodeMachine();
-        OpenDoorIfNeed();
-    }
+		var prt = _raycast.GetPlayerTarget();
 
-    public void OpenDoorIfNeed()
-    {
-        if (!_raycast.isDoorTarget)
+        if (prt == null)
             return;
 
-        var animator = _raycast.target.GetComponent<Animator>();
+		if (prt.IsComputer)
+			ActivateComputer();
+		if (prt.IsAutoDecodeMachine || prt.IsManualDecodeMachine)
+			ProcessDecodeMachine(prt.Target.GetComponentInChildren<Decoder>());
+		if (prt.IsDoor)
+			ToggleDoor(prt.Target.GetComponent<Animator>());
+        if (prt.IsItem)
+        {
+            if (_inventory.AddItem(prt.Item))
+                prt.Target.SetActive(!false);
+        }     
+    }
+
+    public void ToggleDoor(Animator animator)
+    {
         bool isOpen = animator.GetBool("IsDoorOpen");
         animator.SetBool("IsDoorOpen", !isOpen);
     }
 
-    public void ProcessDecodeMachine()
+    public void ProcessDecodeMachine(Decoder decoder)
     {
-        if (!(_raycast.isAutoDecodeMechineTarget || _raycast.isMiniGameDecodeMechineTarget))
-            return;
-
-        var selectedItem = FindAnyObjectByType<Inventory>().selectedItem;
+        var selectedItem = FindAnyObjectByType<Inventory>().SelectedSlot.HoldingItem;
         var paper = selectedItem == null ? null : selectedItem.GetComponentInChildren<Paper>();
-        Decoder decoder = _raycast.target.GetComponentInChildren<Decoder>();
-
-        var pickUp = FindAnyObjectByType<PickUp>();
 
         if (decoder == null)
             return;
 
-        if (paper != null)
+        // исправить баг с исчезновением листка
+        if (paper != null && decoder.Paper == null)
         {
-            if (decoder is AutoDecoder autoDecoder)
-            {
-                if (autoDecoder.IsFree)
-                {
-                    pickUp.RemoveSelectedItem();
-                    autoDecoder.PaperObj = selectedItem;
-                    autoDecoder.Decode(paper);
-                    return;
-                }
-            }   
-            else if (decoder is MiniGameDecoder miniGameDecoder)
-            {
-                if (miniGameDecoder.IsFree)
-                {
-                    pickUp.RemoveSelectedItem();
-                    miniGameDecoder.PaperObj = selectedItem;
-                    miniGameDecoder.Decode(paper);
-                    return;
-                }
-            }
+            _inventory.ClearSlot();
+            decoder.PaperObj = selectedItem.gameObject;
+            decoder.Decode(paper);
+            return;
         }
 
         if (decoder?.Paper != null)
-        {
-            if (decoder is AutoDecoder autoDecoder)
-            {
-                if (autoDecoder.IsDecodingDone)
-                    pickUp.AddItem(autoDecoder.GetAndClearPaper(), false);
-            }
-            else if (decoder is MiniGameDecoder miniGameDecoder)
-            {
-                if (miniGameDecoder.IsPaperPickable)
-                    pickUp.AddItem(miniGameDecoder.GetAndClearPaper(), false);
-            }
+        {        
+            if (decoder.IsPaperPickable)
+                _inventory.AddItem(decoder.GetPaper());
         }
     }
 
-    public void ActivateComputerIfNeed()
+    public void ActivateComputer()
     {
-        if (_raycast.isComputerTarget)
-        {
-            _movement.enabled = false;
-            _computerMenu.SetActive(true);
-        }
+        _movement.enabled = false;
+        _computerMenu.SetActive(true);
     }
 }

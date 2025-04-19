@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ShopItem : Item, IPointerClickHandler, IPointerEnterHandler
+public class ShopItem : Assets.Scripts.Market.Items.Item, IPointerClickHandler, IPointerEnterHandler
 {
     [SerializeField] private ShopItemScriptableObject _characteristics;
     public string Name { get => _characteristics.Name; }

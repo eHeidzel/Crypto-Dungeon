@@ -8,7 +8,7 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
     }
 
-    public void StartNeaGame()
+    public void StartNewGame()
     {
         SceneManager.LoadScene("Home");
     }

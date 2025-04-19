@@ -1,9 +1,8 @@
-using TMPro;
 using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    [Header("Sensivity")]
+    [Header("Sensitivity")]
     [SerializeField] float mouseSensitivity = 100f;
     [Header("Zoom")]
     [SerializeField] float maxZoomDistance;

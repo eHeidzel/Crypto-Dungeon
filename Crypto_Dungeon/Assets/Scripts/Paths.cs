@@ -26,10 +26,10 @@ namespace Assets
         public static string GetTitlesPath() => 
             @$"{Application.streamingAssetsPath}{sep}{Localization}{sep}Titles{sep}Titles.txt";
 
-        public static string GetSubtitlesPath(string filename, SubtitilesType type, int index) => 
+        public static string GetSubtitlesPath(string filename, SubtitlesType type, int index) => 
             @$"{Application.streamingAssetsPath}{sep}{Localization}{sep}Subtitles{sep}{type}{sep}{filename}{sep}{index}.txt";
 
-        public static string GetSubtitlesPath(string filename, SubtitilesType type) =>
+        public static string GetSubtitlesPath(string filename, SubtitlesType type) =>
             @$"{Application.streamingAssetsPath}{sep}{Localization}{sep}Subtitles{sep}{type}{sep}{filename}.txt";
 
         public static string GetSpritesDirPath(string presentationName) =>

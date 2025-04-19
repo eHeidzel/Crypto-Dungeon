@@ -9,7 +9,7 @@ public class InputKeysReaderWithChecker : InputKeysReader
     [SerializeField] private float _cutSequenceDelayInMilliseconds;
     [SerializeField] private Object[] _onSeqFoundArgs;
     private string _checkSequence = null;
-    public UnityEvent<Object[]> _onSeqFound;
+    [SerializeField] private UnityEvent<Object[]> _onSeqFound;
     public bool IsSeqFound { get; private set; }
 
     public void SetCheckSequence(string seq)

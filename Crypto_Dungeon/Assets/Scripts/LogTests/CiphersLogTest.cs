@@ -10,7 +10,7 @@ public class CiphersLogTest : MonoBehaviour
     [SerializeField] string keyEN = "KEY";
 
     [SerializeField] int shift = 1;
-    [SerializeField] TextMeshProUGUI vegenereOutputRU, vegenereOutputEN;
+    [SerializeField] TextMeshProUGUI vigenereOutputRU, vigenereOutputEN;
 
     void Start()
     {

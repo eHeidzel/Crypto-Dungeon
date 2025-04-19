@@ -58,10 +58,11 @@ public class ComputerButtonOperations : MonoBehaviour
     }
 
     //TODO переписать на поиск компонента конкретно того пользователя, который пользуется компьютером
+    //В мультиплеере
     public void Return()
     {
         computer.SetActive(false);
-        foreach (var item in Transform.FindObjectsByType<Movement>(FindObjectsSortMode.None))
+        foreach (var item in FindObjectsByType<Movement>(FindObjectsSortMode.None))
             item.enabled = true;
 
         Cursor.visible = false;

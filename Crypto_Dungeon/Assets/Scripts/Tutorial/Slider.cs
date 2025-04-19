@@ -35,7 +35,7 @@ public class Slider : MonoBehaviour
     {
         _cipherForPresentation = GameSaves.PresentedCipher;
         _slides = ReadSlides(_cipherForPresentation.ToString());
-        subtitlesPlayer.SetConfigPath(_cipherForPresentation.ToString(), SubtitilesType.Tutorial);
+        subtitlesPlayer.SetConfigPath(_cipherForPresentation.ToString(), SubtitlesType.Tutorial);
         ShowSprite();
     }
 

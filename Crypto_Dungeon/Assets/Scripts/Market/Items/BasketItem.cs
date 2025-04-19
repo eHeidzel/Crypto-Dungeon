@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 namespace Assets.Scripts.Market
 {
-    public class BasketItem : Item
+    public class BasketItem : Items.Item
     {
         [SerializeField] private Button _cancelBtn, _buyBtn;
 
@@ -16,10 +16,10 @@ namespace Assets.Scripts.Market
             _orderedItem = item;
 
             transform.GetChild(0).GetComponent<Image>().overrideSprite = item.Sprite;
-            var tmps = transform.GetComponentsInChildren<TextMeshProUGUI>();
-            tmps[0].text = _orderedItem.Name;
-            tmps[1].text = _orderedItem.Price.ToString();
-            tmps[2].text = _orderedItem.Description;
+            var textCms = transform.GetComponentsInChildren<TextMeshProUGUI>();
+            textCms[0].text = _orderedItem.Name;
+            textCms[1].text = _orderedItem.Price.ToString();
+            textCms[2].text = _orderedItem.Description;
 
             _cancelBtn.onClick.AddListener(() => Basket.RemoveItemDecline(_orderedItem));
             _buyBtn.onClick.AddListener(() => Basket.RemoveItem(_orderedItem));

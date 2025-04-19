@@ -17,7 +17,6 @@ public class InputKeysReader : MonoBehaviour
 
     protected Action _afterUpdate;
     protected string _text = "";
-    private string _previousText;
     private Stopwatch _stopwatch = new Stopwatch();
 
     public void Restart()
@@ -27,7 +26,7 @@ public class InputKeysReader : MonoBehaviour
         _text = "";
 
         if (_isNeedToClear)
-            StartCoroutine(ClearReadedTextIfNotUpdated());
+            StartCoroutine(ClearNotUpdatedText());
     }
 
     void Update()
@@ -39,8 +38,6 @@ public class InputKeysReader : MonoBehaviour
     {
         if (Input.anyKeyDown)
         {
-            _previousText = _text;
-
             foreach (KeyCode keyCode in keyCodes)
             {
                 if (Input.GetKeyDown(keyCode))
@@ -97,7 +94,7 @@ public class InputKeysReader : MonoBehaviour
                char.ToLower((char)letter);
     }
 
-    private IEnumerator ClearReadedTextIfNotUpdated()
+    private IEnumerator ClearNotUpdatedText()
     {
         yield return new WaitForSeconds(_clearCheckDelayInMilliseconds / 1000);
 
@@ -107,7 +104,7 @@ public class InputKeysReader : MonoBehaviour
             _afterUpdate?.Invoke();
         }
 
-        StartCoroutine(ClearReadedTextIfNotUpdated());
+        StartCoroutine(ClearNotUpdatedText());
     }
 
     public void SetAfterUpdateEvent(Action action) => _afterUpdate = action;

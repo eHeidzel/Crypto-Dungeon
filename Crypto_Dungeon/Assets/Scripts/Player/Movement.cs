@@ -1,3 +1,4 @@
+using System.Threading;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -64,11 +65,14 @@ public class Movement : MonoBehaviour
 
         if (canMove)
         {
-            rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
-            rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-            playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
-        }
+			float mouseX = Input.GetAxis("Mouse X");
+			float mouseY = Input.GetAxis("Mouse Y");
+
+			rotationX += -mouseY * lookSpeed;
+			rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
+			playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+			transform.rotation *= Quaternion.Euler(0, mouseX * lookSpeed, 0);
+		}
 
         #endregion
     }

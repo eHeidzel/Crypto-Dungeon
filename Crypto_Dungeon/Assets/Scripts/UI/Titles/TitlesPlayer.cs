@@ -13,7 +13,7 @@ public class TitlesPlayer : MonoBehaviour
 
     [Header("ScrollSettings")]
     [SerializeField] private Scrollbar _scrollbar;
-    [SerializeField] private float _scrollDelayInMillisecons;
+    [SerializeField] private float _scrollDelayInMilliseconds;
     [SerializeField] private float _scrollTimes;
     private float _scrollValue;
 
@@ -62,7 +62,7 @@ public class TitlesPlayer : MonoBehaviour
 
     private IEnumerator ShowCredits(int index = 0)
     {
-        yield return new WaitForSeconds(_scrollDelayInMillisecons / 1000);
+        yield return new WaitForSeconds(_scrollDelayInMilliseconds / 1000);
         _scrollbar.value -= _scrollValue;
 
         if (_scrollbar.value > 0)

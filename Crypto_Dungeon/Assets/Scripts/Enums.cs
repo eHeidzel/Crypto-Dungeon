@@ -23,7 +23,7 @@ public enum FontType
     Author
 }
 
-public enum SubtitilesType
+public enum SubtitlesType
 {
     Tutorial
 }

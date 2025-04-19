@@ -7,16 +7,16 @@ public class AutoDecoder : Decoder
     [SerializeField] private GameObject _loadingScreen;
     [SerializeField] private LoadingTimer timer;
 
-    public new bool IsFree { get => timer.IsTimerEnd && Paper == null; }
-    public new bool IsDecodingDone { get => timer.IsTimerEnd && Paper != null; }
+    public override bool IsFree { get => timer.IsTimerEnd && Paper == null; }
+	public override bool IsPaperPickable { get => timer.IsTimerEnd && Paper != null; }
 
-    public new Items GetAndClearPaper()
+    public override Item GetPaper()
     {
         _loadingScreen.SetActive(false);
-        return base.GetAndClearPaper();        
+        return base.GetPaper();        
     }
 
-    public new void Decode(Paper paper)
+    public override void Decode(Paper paper)
     {
         base.Decode(paper);
 

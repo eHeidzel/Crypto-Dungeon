@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Items
   - Computer
-  - FullDecodeMechineTarget
-  - MiniGameDecodeMechineTarget
   - Door
   - Paper
+  - AutoDecodeMachine
+  - Items
+  - ManualDecodeMachine
   layers:
   - Default
   - TransparentFX

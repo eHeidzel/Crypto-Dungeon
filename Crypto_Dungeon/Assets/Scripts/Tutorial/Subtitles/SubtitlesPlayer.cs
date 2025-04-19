@@ -10,12 +10,12 @@ public class SubtitlesPlayer : MonoBehaviour
 
     [Header("Use if not addicted to another script")]
     [SerializeField] private string _filename;
-    [SerializeField] private SubtitilesType _type;
+    [SerializeField] private SubtitlesType _type;
 
     private Subtitle[] subtitles;
     private Coroutine runningSubtitlesCoroutine;
 
-    public void SetConfigPath(string filename, SubtitilesType type)
+    public void SetConfigPath(string filename, SubtitlesType type)
     {
         _filename = filename;
         _type = type;

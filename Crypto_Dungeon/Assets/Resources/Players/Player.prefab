@@ -330,15 +330,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab5c364cefa8346aa5469d56d3ecf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isFull: 00000000
   slots:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  items: []
-  selectedSlot: {fileID: 0}
-  selectedItem: {fileID: 0}
+  increase: 1.2
 --- !u!114 &1769628755781262872
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -352,11 +349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  items: {fileID: 0}
-  isComputerTarget: 0
-  isDoorTarget: 0
-  isAutoDecodeMechineTarget: 0
-  isMiniGameDecodeMechineTarget: 0
+  item: {fileID: 0}
 --- !u!114 &4285922979509846850
 MonoBehaviour:
   m_ObjectHideFlags: 0

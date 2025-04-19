@@ -6,18 +6,17 @@ namespace Assets.Scripts.Mechanics.Decoders
     {
         public Paper Paper { get; protected set; }
         public GameObject PaperObj;
-        public bool IsFree { get; }
-        public bool IsPaperPickable { get; }
+        public virtual bool IsFree { get; }
+        public virtual bool IsPaperPickable { get; }
 
-        public Items GetAndClearPaper()
+        public virtual Item GetPaper()
         {
-            Paper.ChangeStateToDecoded();
             Paper = null;
 
-            return PaperObj.GetComponent<Items>();
+            return PaperObj.GetComponent<Item>();
         }
 
-        public void Decode(Paper paper)
+        public virtual void Decode(Paper paper)
         {
             Paper = paper;
         }

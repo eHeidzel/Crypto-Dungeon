@@ -7,8 +7,5 @@ public class DrawImages : MonoBehaviour
     [SerializeField] private Sprite[] draws;
     [SerializeField] private Image image;
 
-    void Start()
-    {
-        image.overrideSprite = draws[index];
-    }
+    void Start() => image.overrideSprite = draws[index];
 }

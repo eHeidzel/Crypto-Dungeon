@@ -1,19 +1,52 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
-    [SerializeField] public bool[] isFull;
-    [SerializeField] public List<Slot> slots;
+    [SerializeField] private List<Slot> slots;
+	public List<Slot> Slots => slots.ToList();
 
-    public List<GameObject> items;
+	[SerializeField] private float increase;
 
-    public GameObject selectedSlot;
-    public GameObject selectedItem;
+	private Slot selectedSlot;
+    public Slot SelectedSlot { get => selectedSlot; private set { selectedSlot = value; } }
 
-    private void Start()
+	public bool AddItem(Item item)
+	{
+		foreach (var slot in slots)
+		{
+			if (slot.IsFull)
+				continue;
+
+			GameObject gm = new GameObject(item.name);
+			gm.transform.SetParent(slot.transform, false);
+			var image = (Image)gm.AddComponent(typeof(Image));
+			image.overrideSprite = item.slotIcon;
+
+			slot.SetItem(item);
+			SelectSlot(slot.Id); //убрать если не хочется, чтобы предмет автоматически выбирался
+
+			return true;
+		}
+
+		return false;
+	}
+
+	public void SelectSlot(int id)
+	{
+		SelectedSlot = slots[id];
+
+		foreach (var slot in slots)
+			slot.SetDefaultSize();
+
+		SelectedSlot.IncreaseSize(increase);
+	}
+
+	public void ClearSlot()
     {
-        items = new List<GameObject>(new GameObject[4]);
-        slots = FindAnyObjectByType<ChooseSlot>().slots;
-    }
+		SelectedSlot.SetItem(null);
+		Destroy(SelectedSlot.transform.GetChild(0).gameObject);
+	}
 }

@@ -20,7 +20,7 @@ namespace Assets.Scripts.Market
         }
 
         /// <summary>
-        /// Returns true if balance enought to buy and false if not
+        /// Returns true if balance enough to buy and false if not
         /// </summary>
         /// <param name="item"></param>
         public static bool RemoveItem(ShopItem item)
