@@ -13,7 +13,9 @@ namespace Assets.Scripts
 		public bool IsDoor => tag == "Door";
 		public bool IsAutoDecodeMachine => tag == "AutoDecodeMachine";
 		public bool IsManualDecodeMachine => tag == "ManualDecodeMachine";
-		public bool IsComputer => tag == "Computer";
+		public bool IsBaseComputer => tag == "ComputerBase";
+		public bool IsShipComputer => tag == "PlanetComputer";
+		public bool IsTeleport => tag == "Teleport";
 		public bool IsItem { get => Item != null; }
 
 		public PlayerRaycastTarget(GameObject target)

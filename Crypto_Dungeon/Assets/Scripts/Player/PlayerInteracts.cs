@@ -1,9 +1,10 @@
+using Assets.Scripts;
 using Assets.Scripts.Mechanics.Decoders;
 using UnityEngine;
 
 public class PlayerInteracts : MonoBehaviour
 {
-    [SerializeField] private GameObject _computerMenu;
+    [SerializeField] private GameObject _baseComputerMenu, _shipComputerMenu;
     private Raycast _raycast;
     private Movement _movement;
     private Inventory _inventory;
@@ -20,21 +21,25 @@ public class PlayerInteracts : MonoBehaviour
         if (!Input.GetKeyDown(KeyCode.E))
             return;
 
-		var prt = _raycast.GetPlayerTarget();
+		PlayerRaycastTarget prt = _raycast.GetPlayerTarget();
 
         if (prt == null)
             return;
 
-		if (prt.IsComputer)
-			ActivateComputer();
+		if (prt.IsShipComputer)
+			ActivateShipComputerCanvas();
+		if (prt.IsBaseComputer)
+			ActivateBaseComputerCanvas();
 		if (prt.IsAutoDecodeMachine || prt.IsManualDecodeMachine)
 			ProcessDecodeMachine(prt.Target.GetComponentInChildren<Decoder>());
 		if (prt.IsDoor)
 			ToggleDoor(prt.Target.GetComponent<Animator>());
+        if (prt.IsTeleport)
+            prt.Target.GetComponent<Teleport>().TeleportGm(gameObject);
         if (prt.IsItem)
         {
             if (_inventory.AddItem(prt.Item))
-                prt.Target.SetActive(!false);
+                prt.Target.SetActive(false);
         }     
     }
 
@@ -52,7 +57,6 @@ public class PlayerInteracts : MonoBehaviour
         if (decoder == null)
             return;
 
-        // исправить баг с исчезновением листка
         if (paper != null && decoder.Paper == null)
         {
             _inventory.ClearSlot();
@@ -68,9 +72,15 @@ public class PlayerInteracts : MonoBehaviour
         }
     }
 
-    public void ActivateComputer()
+    public void ActivateBaseComputerCanvas()
     {
         _movement.enabled = false;
-        _computerMenu.SetActive(true);
+        _baseComputerMenu.SetActive(true);
     }
+
+	public void ActivateShipComputerCanvas()
+	{
+		_movement.enabled = false;
+		_shipComputerMenu.SetActive(true);
+	}
 }

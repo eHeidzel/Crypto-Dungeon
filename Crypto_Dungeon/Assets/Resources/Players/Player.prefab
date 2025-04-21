@@ -67,7 +67,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0.01
   far clip plane: 1000
   field of view: 60
   orthographic: 0
@@ -147,7 +147,6 @@ GameObject:
   - component: {fileID: 5462254150658214919}
   - component: {fileID: 4465112684160865051}
   - component: {fileID: 1769628755781262872}
-  - component: {fileID: 4285922979509846850}
   - component: {fileID: 1720417493807276578}
   m_Layer: 8
   m_Name: Player
@@ -350,20 +349,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74eb54b841dbb3a40b161c243f20292b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  item: {fileID: 0}
---- !u!114 &4285922979509846850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876681523394691484}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b4510acd45141b469f8910c4366a632, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1720417493807276578
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -371,12 +356,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 876681523394691484}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0156f0109c595534aa5fbf90efc33f3a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _computerMenu: {fileID: 0}
+  _baseComputerMenu: {fileID: 0}
+  _shipComputerMenu: {fileID: 0}
 --- !u!1 &3677982115135282817
 GameObject:
   m_ObjectHideFlags: 0
@@ -508,7 +494,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 1}
+  m_BackGroundColor: {r: 0.07058824, g: 0.18039216, b: 0.35686275, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -561,4 +547,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff26db721962cdf4a8edcdfa9a767d2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  profile: {fileID: 11400000, guid: 31305b72c1809f24a8c68d2f048606f2, type: 2}
+  profile: {fileID: 11400000, guid: 2c9b24a2c8d50f54faf98c1af739dd1b, type: 2}

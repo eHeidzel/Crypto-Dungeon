@@ -4,14 +4,20 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Items
-  - Computer
   - FullDecodeMechineTarget
   - MiniGameDecodeMechineTarget
   - Door
   - Paper
   - PlanetComputer
   - Mapping
+  - AutoDecodeMachine
+  - ManualDecodeMachine
+  - ComputerBase
+  - Computer
+  - Fire
+  - Item
+  - Items
+  - Teleport
   layers:
   - Default
   - TransparentFX
