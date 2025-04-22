@@ -43,7 +43,7 @@ public class InputKeysReaderWithChecker : InputKeysReader
         if (_text.ToLower() == _checkSequence)
         {
             IsSeqFound = true;
-            _onSeqFound?.Invoke(_onSeqFoundArgs);
+            _onSeqFound.Invoke(_onSeqFoundArgs);
             StopAllCoroutines();
             yield break;
         }

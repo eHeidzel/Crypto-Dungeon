@@ -55,7 +55,10 @@ public class DecodeScreen : MonoBehaviour
         Texture2D tex = new Texture2D(2, 2);
         tex.LoadImage(pngBytes);
 
-        Sprite hint = Sprite.Create(tex, new Rect(0.0f, 0.0f, tex.width, tex.height), new Vector2(0.5f, 0.5f), 100.0f);
+        Sprite hint = Sprite.Create(
+            tex, 
+            new Rect(0.0f, 0.0f, tex.width, tex.height), 
+            new Vector2(0.5f, 0.5f), 100.0f);
 
         _hintScreen.GetComponentInChildren<Image>().overrideSprite = hint;
     }

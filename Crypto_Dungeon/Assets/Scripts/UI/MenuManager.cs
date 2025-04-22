@@ -28,7 +28,10 @@ public class MenuManager : MonoBehaviour
         if (DisableMenu(_gameMenu))
             return;
         else
+        {
             _gameMenu.SetActive(true);
+            Cursor.visible = true;
+        }
     }
 
     public static bool DisableMenu(GameObject menu)
