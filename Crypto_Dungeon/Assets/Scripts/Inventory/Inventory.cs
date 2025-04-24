@@ -1,3 +1,4 @@
+using Assets.Scripts.Inventory;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -10,8 +11,21 @@ public class Inventory : MonoBehaviour
 
 	[SerializeField] private float increase;
 
+	private ItemRenderer itemRenderer;
 	private Slot selectedSlot;
     public Slot SelectedSlot { get => selectedSlot; private set { selectedSlot = value; } }
+	public bool HasFreeSlots => slots.Any(slot => slot.HoldingItem == null);
+
+	void Start()
+	{
+		itemRenderer = FindAnyObjectByType<ItemRenderer>();
+	}
+
+	private void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.Q))
+			DropItem();
+	}
 
 	public bool AddItem(Item item)
 	{
@@ -42,11 +56,59 @@ public class Inventory : MonoBehaviour
 			slot.SetDefaultSize();
 
 		SelectedSlot.IncreaseSize(increase);
+
+		RenderItem();
+	}
+
+	private void RenderItem()
+	{
+		var gm = selectedSlot.HoldingItem?.gameObject;
+
+		if (gm == null)
+		{
+			itemRenderer.UpdateMesh(null, null);
+			return;
+		}
+
+		var meshFilter = gm.GetComponentInChildren<MeshFilter>();
+		if (meshFilter == null || meshFilter.sharedMesh == null)
+			return;
+
+		Mesh copiedMesh = Instantiate(meshFilter.sharedMesh);
+		var mat = gm.GetComponentInChildren<Renderer>().material;
+
+		itemRenderer.UpdateMesh(copiedMesh, mat);
+
+		Vector3 pos = selectedSlot.HoldingItem.InitP;
+		Vector3 rot = selectedSlot.HoldingItem.InitR;
+		Vector3 sca = selectedSlot.HoldingItem.InitS;
+
+		itemRenderer.SetInitTransform(pos, rot, sca);
 	}
 
 	public void ClearSlot()
     {
-		SelectedSlot.SetItem(null);
-		Destroy(SelectedSlot.transform.GetChild(0).gameObject);
+		if (selectedSlot == null) return;
+
+		selectedSlot.SetItem(null);
+		SelectSlot(selectedSlot.Id);
+		Destroy(selectedSlot.transform.GetChild(0).gameObject);
+	}
+
+	public void DropItem()
+	{
+		if (selectedSlot?.HoldingItem == null) return;
+
+		var itemToDropTr = selectedSlot.HoldingItem.transform;
+		itemToDropTr.position = itemRenderer.ItemTr.position;
+		itemToDropTr.rotation = itemRenderer.ItemTr.rotation;
+
+		var gm = itemToDropTr.gameObject;
+
+		gm.SetActive(true);
+		var force = Camera.main.transform.forward;
+		gm.GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);
+
+		ClearSlot();
 	}
 }

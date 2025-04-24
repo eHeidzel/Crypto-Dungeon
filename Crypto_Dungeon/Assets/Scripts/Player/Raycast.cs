@@ -3,17 +3,17 @@ using UnityEngine;
 
 public class Raycast : MonoBehaviour
 {
-	private Vector3 raycastOriginPosition => GameObject.Find("EyesRaycastOrigin").transform.position;
+	[SerializeField] private LayerMask layerMask;
 
 	public PlayerRaycastTarget GetPlayerTarget()
     {
         Transform mainCameraTr = Camera.main.transform;
-        Ray ray = new Ray(raycastOriginPosition, mainCameraTr.forward);
+        Ray ray = new Ray(mainCameraTr.position, mainCameraTr.forward);
 		GameObject target = null;
 
 		Debug.DrawRay(ray.origin, ray.direction * 1.8f, Color.red, 1f);
 
-		if (Physics.Raycast(ray, out RaycastHit hit, 1.8f))
+		if (Physics.Raycast(ray, out RaycastHit hit, 1.8f, layerMask))
 			target = hit.collider.gameObject;
 
         PlayerRaycastTarget prt = target == null ? null : new PlayerRaycastTarget(target);

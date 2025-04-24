@@ -7,18 +7,23 @@ public class SkitalaCipher : Cipher
     public readonly Alphabet Alphabet;
     public readonly char[] AlphabetChars;
 
-    private Random _random = new Random();
+    private int _seed;
+    private Random _random;
 
     public SkitalaCipher(string message, Alphabet alphabet, int shift) : base(message)
     {
         Shift = shift;
         Alphabet = alphabet;
         AlphabetChars = AlphabetManager.GetAlphabet(alphabet);
+
+        _seed = new Random().Next(int.MinValue, int.MaxValue);
     }
 
     public override string Encode(string message)
     {
-        string res = "";
+		_random = new Random(_seed);
+
+		string res = "";
 
         for (int i = 0; i < message.Length; i++)
         {

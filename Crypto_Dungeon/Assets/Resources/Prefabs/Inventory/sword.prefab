@@ -153,3 +153,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIcon: {fileID: 21300000, guid: e6b13aaa2a891144481fcffff5e0b628, type: 3}
+  initP: {x: 0.9, y: -0.6, z: 1.23}
+  initR: {x: 0, y: -45, z: 60}
+  initS: {x: 0.2, y: 0.2, z: 0.2}

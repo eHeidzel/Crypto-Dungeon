@@ -68,7 +68,8 @@ public class PlayerInteracts : MonoBehaviour
         if (decoder?.Paper != null)
         {        
             if (decoder.IsPaperPickable)
-                _inventory.AddItem(decoder.GetPaper());
+                if (_inventory.HasFreeSlots)
+                    _inventory.AddItem(decoder.GetPaper());
         }
     }
 

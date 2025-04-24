@@ -85,9 +85,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f8c99286e5292574a9062982fe393a9c, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5393495244942856636}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f8c99286e5292574a9062982fe393a9c, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 9210495506396747821}
   m_SourcePrefab: {fileID: 100100000, guid: f8c99286e5292574a9062982fe393a9c, type: 3}
 --- !u!1 &5534892592348609820 stripped
 GameObject:
@@ -156,16 +153,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIcon: {fileID: 21300000, guid: 6aaa3747ad8106f418f5d3d3fb4be28f, type: 3}
---- !u!114 &9210495506396747821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5534892592348609820}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d68a437627eedfc4893cc704b437cd7d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  slotIcon: {fileID: 21300000, guid: 6aaa3747ad8106f418f5d3d3fb4be28f, type: 3}
+  scaleFactor: 0.3
+  initRotation: {x: 0, y: 0, z: 0}

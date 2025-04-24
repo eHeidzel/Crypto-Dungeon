@@ -1,4 +1,3 @@
-using System.Threading;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -16,7 +15,7 @@ public class Movement : MonoBehaviour
 
 
     Vector3 moveDirection = Vector3.zero;
-    float rotationX = 0;
+    float rotationX = 0, rotationY;
 
     public bool canMove = true;
 
@@ -29,12 +28,10 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
-
-        #region Handles Movment
+        #region Handles Movement
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
-        // Press Left Shift to run
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
         float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
         float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
@@ -52,26 +49,32 @@ public class Movement : MonoBehaviour
         {
             moveDirection.y = movementDirectionY;
         }
-
+        
         if (!characterController.isGrounded)
         {
             moveDirection.y -= gravity * Time.deltaTime;
         }
 
-        #endregion
+		#endregion
 
-        #region Handles Rotation
-        characterController.Move(moveDirection * Time.deltaTime);
+		characterController.Move(moveDirection * Time.deltaTime);
 
-        if (canMove)
+		#region Handles Rotation
+
+		if (canMove)
         {
 			float mouseX = Input.GetAxis("Mouse X");
 			float mouseY = Input.GetAxis("Mouse Y");
-
+        
 			rotationX += -mouseY * lookSpeed;
+            rotationY += mouseX * lookSpeed;
 			rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
-			playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+
 			transform.rotation *= Quaternion.Euler(0, mouseX * lookSpeed, 0);
+
+			playerCamera.transform.localRotation = 
+                Quaternion.Euler(0, rotationY, 0) * 
+                Quaternion.Euler(rotationX, 0, 0);
 		}
 
         #endregion
