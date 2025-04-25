@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 [RequireComponent(typeof(CharacterController))]
@@ -17,7 +18,7 @@ public class Movement : MonoBehaviour
     Vector3 moveDirection = Vector3.zero;
     float rotationX = 0, rotationY;
 
-    public bool canMove = true;
+    public bool CanMove = true;
 
 
     CharacterController characterController;
@@ -28,31 +29,37 @@ public class Movement : MonoBehaviour
 
     void Update()
     {
+        if (!characterController.isGrounded)
+            moveDirection.y -= gravity * Time.deltaTime;
+
+        if (!CanMove)
+        {
+            moveDirection.x = 0;
+            moveDirection.z = 0;
+            characterController.Move(moveDirection * Time.deltaTime);
+            return;
+        }
+
         #region Handles Movement
         Vector3 forward = transform.TransformDirection(Vector3.forward);
         Vector3 right = transform.TransformDirection(Vector3.right);
 
         bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        float curSpeedX = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
-        float curSpeedY = canMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
+        float curSpeedX = CanMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Vertical") : 0;
+        float curSpeedY = CanMove ? (isRunning ? runSpeed : walkSpeed) * Input.GetAxis("Horizontal") : 0;
         float movementDirectionY = moveDirection.y;
         moveDirection = (forward * curSpeedX) + (right * curSpeedY);
 
         #endregion
 
         #region Handles Jumping
-        if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
+        if (Input.GetButton("Jump") && CanMove && characterController.isGrounded)
         {
             moveDirection.y = jumpPower;
         }
         else
         {
             moveDirection.y = movementDirectionY;
-        }
-        
-        if (!characterController.isGrounded)
-        {
-            moveDirection.y -= gravity * Time.deltaTime;
         }
 
 		#endregion
@@ -61,7 +68,7 @@ public class Movement : MonoBehaviour
 
 		#region Handles Rotation
 
-		if (canMove)
+		if (CanMove)
         {
 			float mouseX = Input.GetAxis("Mouse X");
 			float mouseY = Input.GetAxis("Mouse Y");
@@ -78,5 +85,10 @@ public class Movement : MonoBehaviour
 		}
 
         #endregion
+    }
+
+    public void AddPlayerCameraRotation(Quaternion rotation)
+    {
+        playerCamera.transform.localRotation *= rotation;
     }
 }
