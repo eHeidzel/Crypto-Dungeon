@@ -35,7 +35,7 @@ public class PlayerInteracts : MonoBehaviour
 		if (prt.IsDoor)
 			ToggleDoor(prt.Target.GetComponent<Animator>());
         if (prt.IsTeleport)
-            prt.Target.GetComponent<Teleport>().TeleportGm(gameObject);
+            prt.Target.GetComponent<Teleport>().TeleportDelayed(gameObject);
         if (prt.IsItem)
         {
             if (_inventory.AddItem(prt.Item))
