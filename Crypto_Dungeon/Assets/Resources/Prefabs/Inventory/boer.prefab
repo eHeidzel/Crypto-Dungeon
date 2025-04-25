@@ -176,5 +176,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slotIcon: {fileID: 21300000, guid: 6eaadef1e9145b441b92e080d0570e52, type: 3}
-  scaleFactor: 0.2
-  initRotation: {x: 0, y: 0, z: 0}
+  initP: {x: 0.9, y: -0.6, z: 1.1}
+  initR: {x: 0, y: 45, z: 0}
+  initS: {x: 0.15, y: 0.15, z: 0.15}
