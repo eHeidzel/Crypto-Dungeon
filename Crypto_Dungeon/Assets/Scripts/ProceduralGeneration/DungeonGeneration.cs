@@ -37,7 +37,7 @@ public class DungeonGeneration : MonoBehaviour
             Room previousRoom = roomList[i];
             for(int j = 0; j < previousRoom.doors.Length; j++)
             {
-                if (IsInBounds())
+                //if (IsInBounds())
                     CreateRoom(previousRoom, j);
             } 
         }
