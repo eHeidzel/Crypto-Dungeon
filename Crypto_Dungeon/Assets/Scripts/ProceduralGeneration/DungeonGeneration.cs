@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,105 +6,67 @@ public class DungeonGeneration : MonoBehaviour
 {
     [SerializeField] private Room[] allRooms;
     [SerializeField] private Room firstRoom;
-    [SerializeField] private int maxRoomsCount;
+    [SerializeField] private int roomsCount;
     [SerializeField] private int dungeonWidth, dungeonHeight;
 
-    private bool[][,] roomsGenerationMatrix;
-    private int roomsCreated = 1;
+    private bool[][,] roomsSpawnMatrix;
 
-    private List<Room> createdRooms = new List<Room>();
+    private List<Room> roomList = new List<Room>();
+    private List<Vector2> roomPoss = new List<Vector2>();
 
     void Start()
     {
         CreateRoomsSpawnMatrix();
-        PlaceRooms(firstRoom);
-        CloseLeadingNowhereDoors();
-    }
-
-    private void CloseLeadingNowhereDoors()
-    {
-        //throw new System.NotImplementedException();
+        roomList.Add(firstRoom);
+        PlaceRooms();
     }
 
     private void CreateRoomsSpawnMatrix()
     {
-        firstRoom.posInGenerationMatrix = new Vector3(dungeonWidth / 2, dungeonHeight / 2, dungeonWidth / 2);
+        firstRoom.Pos = new Vector3(dungeonWidth / 2, dungeonHeight / 2);
 
-        roomsGenerationMatrix = new bool[dungeonHeight][,];
+        roomsSpawnMatrix = new bool[dungeonHeight][,];
         for (int i = 0; i < dungeonHeight; i++)
-            roomsGenerationMatrix[i] = new bool[dungeonWidth, dungeonWidth];
-
-        roomsGenerationMatrix[0][(int)firstRoom.posInGenerationMatrix.x, (int)firstRoom.posInGenerationMatrix.z] = true;
+            roomsSpawnMatrix[i] = new bool[dungeonWidth, dungeonWidth];
     }
     
-    private void PlaceRooms(Room firstRoom)
+    private void PlaceRooms()
     {
-        List<Room> rooms = new List<Room>();
-        rooms.Add(firstRoom);
-        createdRooms.Add(firstRoom);
-
-        while (rooms.Count > 0)
+        for (int i = 0; i < roomsCount; i++)
         {
-            Room parentRoom = rooms.First();
-
-            for(int j = 0; j < parentRoom.doors.Length; j++)
+            Room previousRoom = roomList[i];
+            for(int j = 0; j < previousRoom.doors.Length; j++)
             {
-                SpawnDirection? direction = ConvertAngleToDirection(parentRoom.doors[j].eulerAngles.y);
-
-                if (direction == null)
-                    continue;
-
-                Vector3 newRoomPosInGenerationMatrix = parentRoom.posInGenerationMatrix + GetOffset((SpawnDirection)direction);
-                if (IsInBounds(newRoomPosInGenerationMatrix))
-                {
-                    if (IsRoomCanBePlaced(newRoomPosInGenerationMatrix))
-                    {
-                        Room newRoom = CreateRoom(parentRoom, (SpawnDirection)direction, j);
-                        rooms.Add(newRoom);
-                        createdRooms.Add(newRoom);
-                        roomsCreated++;
-
-                        newRoom.posInGenerationMatrix = newRoomPosInGenerationMatrix; // решить проблему с установкой нужных зн и проверку их
-
-                        roomsGenerationMatrix[(int)newRoomPosInGenerationMatrix.y]
-                            [(int)newRoomPosInGenerationMatrix.z, (int)newRoomPosInGenerationMatrix.x] = true;
-
-                        if (roomsCreated >= maxRoomsCount)
-                            return;
-                    }
-                }
-            }
-
-            rooms.Remove(parentRoom);
+                //if (IsInBounds())
+                    CreateRoom(previousRoom, j);
+            } 
         }
     }
 
-    private Room CreateRoom(Room parentRoom, SpawnDirection direction, int j)
+    private void CreateRoom(Room previousRoom, int j)
     {
+        SpawnDirection? spawnDirection = ConvertAngleToDirection(previousRoom.doors[j].rotation.y);
+
+        if (spawnDirection == null)
+            return;
+
         Room newRoom = Instantiate(allRooms[Random.Range(0, allRooms.Length)]);
-        Transform connectDoor = newRoom.GetRandomDoor();
+        newRoom.transform.rotation = previousRoom.doors[j].rotation;
+        newRoom.transform.position = previousRoom.doors[j].transform.position - newRoom.begin.position;
 
-        connectDoor.localRotation *= Quaternion.Euler(0, GetOpposite(parentRoom.doors[j].eulerAngles.y), 0);
-        newRoom.gameObject.transform.rotation *= Quaternion.Euler(0, GetOpposite(parentRoom.doors[j].eulerAngles.y), 0);
-
-        print($"{parentRoom.GetOffset(direction) / 2} {newRoom.GetOffset(direction)}");
-
-        newRoom.transform.position = 
-            parentRoom.transform.position + 
-            parentRoom.GetOffset(direction) * 0.5f + 
-            newRoom.GetOffset(direction);
-
-        createdRooms.Add(newRoom);
-
-        return newRoom;
+        roomList.Add(newRoom);
     }
 
-    private bool IsRoomCanBePlaced(Vector3 posInGenerationMatrix)
+    private bool IsRoomCanBePlaced(Vector3 roomPos, SpawnDirection spawnDirection)
     {
-        bool isBusy = roomsGenerationMatrix[(int)posInGenerationMatrix.y]
-            [(int)posInGenerationMatrix.z, (int)posInGenerationMatrix.x];
-        
-        return !isBusy;
+
+
+        //if (roomsSpawnMatrix[0][(int)room.Pos.x + xOffset, (int)room.Pos.z + zOffset])
+        //    return false;
+
+        //room.Pos += new Vector3(xOffset, 0, zOffset);
+
+        return true;
     }
 
     private Vector3 GetOffset(SpawnDirection spawnDirection)
@@ -121,32 +82,12 @@ public class DungeonGeneration : MonoBehaviour
         return new Vector3(xOffset, 0, zOffset);
     }
 
-    private bool IsInBounds(Vector3 nextPos)
+    private bool IsInBounds(Vector3 roomPos, Vector3 offset)
     {
-        if (nextPos.x >= dungeonWidth || nextPos.x < 0) return false;
-        if (nextPos.z >= dungeonWidth || nextPos.z < 0) return false;
+        if (roomPos.x + offset.x >= dungeonWidth || roomPos.x + offset.x < 0) return false;
+        if (roomPos.z + offset.z >= dungeonHeight || roomPos.z + offset.z < 0) return false;
 
         return true;
-    }
-
-    private float GetOpposite(float angle)
-    {
-        switch (angle)
-        {
-            case 0:
-                return -180;
-            case -180:
-            case 180:
-                return 0;
-            case -90:
-            case 90:
-                return -270;
-            case -270:
-            case 270:
-                return -90;
-            default:
-                throw new System.ArgumentException();
-        }
     }
 
     private SpawnDirection? ConvertAngleToDirection(float angle)
@@ -166,23 +107,6 @@ public class DungeonGeneration : MonoBehaviour
                 return SpawnDirection.Right;
             default:
                 return null;
-        }
-    }
-
-    private float ConvertDirectionToAngle(SpawnDirection direction)
-    {
-        switch (direction)
-        {
-            case SpawnDirection.Forward:
-                return 0;
-            case SpawnDirection.Left:
-                return -90;
-            case SpawnDirection.Back:
-                return -180;
-            case SpawnDirection.Right:
-                return -270;
-            default:
-                throw new System.ArgumentException();
         }
     }
 }
