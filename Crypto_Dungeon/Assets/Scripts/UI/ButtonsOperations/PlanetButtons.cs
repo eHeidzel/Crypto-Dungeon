@@ -21,8 +21,7 @@ public class PlanetButtons : MonoBehaviour
 
     public void ChoosePlanet(string name)
     {
-        PlayerPrefs.SetString("SceneToLoad", name);
-        SceneManager.LoadScene("LoadingScreen 1");
+        SceneManager.LoadScene(name);
     }
 
 
