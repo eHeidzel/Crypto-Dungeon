@@ -37,3 +37,11 @@ public enum CipherType
     SkitalaCipher,
     VigenereCipher
 }
+
+public enum Direction
+{
+    Left,
+    Right,
+    Forward,
+    Back,
+}

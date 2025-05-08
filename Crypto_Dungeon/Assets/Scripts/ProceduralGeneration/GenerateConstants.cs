@@ -2,6 +2,6 @@
 {
     internal class GenerateConstants
     {
-        public const float WALL_WIDTH = 0.15f;
+        public const float WALL_WIDTH = 0f;
     }
 }

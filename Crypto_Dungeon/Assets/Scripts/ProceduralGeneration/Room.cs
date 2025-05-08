@@ -5,7 +5,7 @@ using Random = UnityEngine.Random;
 
 public class Room : MonoBehaviour
 {
-    [SerializeField] public Transform[] doors;
+    [SerializeField] public Door[] doors;
     [SerializeField] public Transform upperCorner;
 
     [HideInInspector]
@@ -17,9 +17,9 @@ public class Room : MonoBehaviour
         set => transform.position = value;
     }
 
-    public Transform GetRandomDoor() => doors[Random.Range(0, doors.Length)];
+    public Door GetRandomDoor() => doors[Random.Range(0, doors.Length)];
 
-    internal Vector3 GetOffset(SpawnDirection direction)
+    internal Vector3 GetOffset(Direction direction)
     {
         Vector3 upperRightCorner = upperCorner.localPosition;
 
@@ -28,10 +28,10 @@ public class Room : MonoBehaviour
 
         switch (direction)
         {
-            case SpawnDirection.Left: return new Vector3(-roomWidthX, 0, 0);
-            case SpawnDirection.Right: return new Vector3(roomWidthX, 0, 0);
-            case SpawnDirection.Forward: return new Vector3(0, 0, roomWidthZ);
-            case SpawnDirection.Back: return new Vector3(0, 0, -roomWidthZ);
+            case Direction.Left: return new Vector3(-roomWidthX, 0, 0);
+            case Direction.Right: return new Vector3(roomWidthX, 0, 0);
+            case Direction.Forward: return new Vector3(0, 0, roomWidthZ);
+            case Direction.Back: return new Vector3(0, 0, -roomWidthZ);
             default: throw new System.ArgumentException();
         }
     }
