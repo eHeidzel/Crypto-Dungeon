@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -6,115 +7,189 @@ public class DungeonGeneration : MonoBehaviour
 {
     [SerializeField] private Room[] allRooms;
     [SerializeField] private Room firstRoom;
-    [SerializeField] private int roomsCount;
+    [SerializeField] private int maxRoomsCount;
     [SerializeField] private int dungeonWidth, dungeonHeight;
 
-    private bool[][,] roomsSpawnMatrix;
+    private bool[][,] roomsGenerationMatrix;
+    private int roomsCreated = 1;
 
-    private List<Room> roomList = new List<Room>();
-    private List<Vector2> roomPoss = new List<Vector2>();
+    private List<Room> createdRooms = new List<Room>();
 
     void Start()
     {
         CreateRoomsSpawnMatrix();
-        roomList.Add(firstRoom);
-        PlaceRooms();
+        PlaceRooms(firstRoom);
+        CloseLeadingNowhereDoors();
+    }
+
+    private void CloseLeadingNowhereDoors()
+    {
+        //throw new System.NotImplementedException();
     }
 
     private void CreateRoomsSpawnMatrix()
     {
-        firstRoom.Pos = new Vector3(dungeonWidth / 2, dungeonHeight / 2);
+        firstRoom.posInGenerationMatrix = new Vector3(dungeonWidth / 2, dungeonHeight / 2, dungeonWidth / 2);
 
-        roomsSpawnMatrix = new bool[dungeonHeight][,];
+        roomsGenerationMatrix = new bool[dungeonHeight][,];
         for (int i = 0; i < dungeonHeight; i++)
-            roomsSpawnMatrix[i] = new bool[dungeonWidth, dungeonWidth];
+            roomsGenerationMatrix[i] = new bool[dungeonWidth, dungeonWidth];
+
+        roomsGenerationMatrix[0][(int)firstRoom.posInGenerationMatrix.x, (int)firstRoom.posInGenerationMatrix.z] = true;
     }
     
-    private void PlaceRooms()
+    private void PlaceRooms(Room firstRoom)
     {
-        for (int i = 0; i < roomsCount; i++)
+        List<Room> rooms = new List<Room>();
+        rooms.Add(firstRoom);
+        createdRooms.Add(firstRoom);
+
+        while (rooms.Count > 0)
         {
-            Room previousRoom = roomList[i];
-            for(int j = 0; j < previousRoom.doors.Length; j++)
+            Room parentRoom = rooms.First();
+
+            for(int j = 0; j < parentRoom.doors.Length; j++)
             {
-                //if (IsInBounds())
-                    CreateRoom(previousRoom, j);
-            } 
+                Direction direction = parentRoom.doors[j].Direction;
+
+                Vector3 newRoomPosInGenerationMatrix = parentRoom.posInGenerationMatrix + GetOffset(direction);
+                if (IsInBounds(newRoomPosInGenerationMatrix))
+                {
+                    if (IsRoomCanBePlaced(newRoomPosInGenerationMatrix))
+                    {
+                        Room newRoom = CreateRoom(parentRoom, direction, j);
+                        rooms.Add(newRoom);
+                        createdRooms.Add(newRoom);
+                        roomsCreated++;
+
+                        newRoom.posInGenerationMatrix = newRoomPosInGenerationMatrix;
+
+                        roomsGenerationMatrix[(int)newRoomPosInGenerationMatrix.y]
+                            [(int)newRoomPosInGenerationMatrix.z, (int)newRoomPosInGenerationMatrix.x] = true;
+
+                        if (roomsCreated >= maxRoomsCount)
+                            return;
+                    }
+                }
+            }
+
+            rooms.Remove(parentRoom);
         }
     }
 
-    private void CreateRoom(Room previousRoom, int j)
+    private Room CreateRoom(Room parentRoom, Direction direction, int j)
     {
-        SpawnDirection? spawnDirection = ConvertAngleToDirection(previousRoom.doors[j].rotation.y);
-
-        if (spawnDirection == null)
-            return;
-
         Room newRoom = Instantiate(allRooms[Random.Range(0, allRooms.Length)]);
-        newRoom.transform.rotation = previousRoom.doors[j].rotation;
-        newRoom.transform.position = previousRoom.doors[j].transform.position - newRoom.begin.position;
+        Door connectDoor = newRoom.GetRandomDoor();
 
-        roomList.Add(newRoom);
+        //connectDoor.localRotation *= Quaternion.Euler(0, GetOpposite(parentRoom.doors[j].eulerAngles.y), 0);
+        //newRoom.gameObject.transform.rotation *= Quaternion.Euler(0, GetOpposite(parentRoom.doors[j].eulerAngles.y), 0);
+
+        print($"{parentRoom.GetOffset(direction) / 2} {newRoom.GetOffset(direction)}");
+
+        newRoom.transform.position = 
+            parentRoom.transform.position + 
+            parentRoom.GetOffset(direction) + 
+            newRoom.GetOffset(direction);
+
+        createdRooms.Add(newRoom);
+
+        return newRoom;
     }
 
-    private bool IsRoomCanBePlaced(Vector3 roomPos, SpawnDirection spawnDirection)
+    private bool IsRoomCanBePlaced(Vector3 posInGenerationMatrix)
     {
-
-
-        //if (roomsSpawnMatrix[0][(int)room.Pos.x + xOffset, (int)room.Pos.z + zOffset])
-        //    return false;
-
-        //room.Pos += new Vector3(xOffset, 0, zOffset);
-
-        return true;
+        bool isBusy = roomsGenerationMatrix[(int)posInGenerationMatrix.y]
+            [(int)posInGenerationMatrix.z, (int)posInGenerationMatrix.x];
+        
+        return !isBusy;
     }
 
-    private Vector3 GetOffset(SpawnDirection spawnDirection)
+    private Vector3 GetOffset(Direction spawnDirection)
     {
         int xOffset, zOffset;
 
-        xOffset = spawnDirection == SpawnDirection.Left ? -1 :
-            spawnDirection == SpawnDirection.Right ? 1 : 0; ;
+        xOffset = spawnDirection == Direction.Left ? -1 :
+            spawnDirection == Direction.Right ? 1 : 0; ;
 
-        zOffset = spawnDirection == SpawnDirection.Back ? -1 :
-            spawnDirection == SpawnDirection.Forward ? 1 : 0;
+        zOffset = spawnDirection == Direction.Back ? -1 :
+            spawnDirection == Direction.Forward ? 1 : 0;
 
         return new Vector3(xOffset, 0, zOffset);
     }
 
-    private bool IsInBounds(Vector3 roomPos, Vector3 offset)
+    private bool IsInBounds(Vector3 nextPos)
     {
-        if (roomPos.x + offset.x >= dungeonWidth || roomPos.x + offset.x < 0) return false;
-        if (roomPos.z + offset.z >= dungeonHeight || roomPos.z + offset.z < 0) return false;
+        if (nextPos.x >= dungeonWidth || nextPos.x < 0) return false;
+        if (nextPos.z >= dungeonWidth || nextPos.z < 0) return false;
 
         return true;
     }
 
-    private SpawnDirection? ConvertAngleToDirection(float angle)
+    private Direction GetOpposite(Direction direction)
     {
-        switch (angle)
+        switch (direction)
         {
-            case 0: 
-                return SpawnDirection.Forward;
-            case -90:
-            case 90:
-                return SpawnDirection.Left;
-            case -180:
-            case 180:
-                return SpawnDirection.Back;
-            case -270:
-            case 270:
-                return SpawnDirection.Right;
+            case Direction.Left:
+                return Direction.Right;
+            case Direction.Right:
+                return Direction.Left;
+            case Direction.Forward:
+                return Direction.Back;
+            case Direction.Back:
+                return Direction.Forward;
             default:
-                return null;
+                throw new System.ArgumentException();
         }
     }
-}
 
-enum SpawnDirection
-{
-    Left,
-    Right,
-    Forward,
-    Back,
+    private Direction GetNext(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.Left:
+                return Direction.Forward;
+            case Direction.Forward:
+                return Direction.Right;
+            case Direction.Right:
+                return Direction.Back;
+            case Direction.Back:
+                return Direction.Left;
+            default:
+                throw new System.ArgumentException();
+        }
+    }
+
+    private int ConvertDirectionToDegreses(Direction direction)
+    {
+        switch (direction)
+        {
+            case Direction.Forward:
+                return 0;
+            case Direction.Right:
+                return 90;
+            case Direction.Back:
+                return 180;
+            case Direction.Left:
+                return 270;
+            default:
+                throw new System.ArgumentException();
+        }
+    }
+
+    public void RotateToFrontOf(Direction doorOut, Direction doorIn, Room newRoom)
+    {
+        int dODegreses = ConvertDirectionToDegreses(doorOut);
+        int dIDegreses = ConvertDirectionToDegreses(doorIn);
+
+        int rotateCount = Mathf.Abs(dODegreses - dIDegreses) / 90;
+
+        for (int i = 0; i < rotateCount; i++)
+            Rotate90Degreses(newRoom);
+    }
+
+    private void Rotate90Degreses(Room room)
+    {
+        //room.transform.rotation.
+    }
 }
