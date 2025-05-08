@@ -10,6 +10,7 @@ public class MainMenu : MonoBehaviour
 
     public void StartNewGame()
     {
-        SceneManager.LoadScene("Home");
+        PlayerPrefs.SetString("SceneToLoad", "Home");
+        SceneManager.LoadScene("LoadingScreen 1");
     }
 }
