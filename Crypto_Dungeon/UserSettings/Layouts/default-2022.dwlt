@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1536
     height: 772.8
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Scene
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -118,7 +118,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 73
+  controlID: 41
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -143,7 +143,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 74
+  controlID: 42
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 50}
   m_MaxSize: {x: 24288, y: 8096}
   vertical: 0
-  controlID: 75
+  controlID: 43
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -189,8 +189,8 @@ MonoBehaviour:
     y: 0
     width: 379.2
     height: 452
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -415,24 +415,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5a850000
-      m_LastClickedID: 0
-      m_ExpandedIDs: 0005ffff5205ffffc021ffffc025ffff58faffff
+      scrollPos: {x: 0, y: 614}
+      m_SelectedIDs: 8e8bfaff
+      m_LastClickedID: -357490
+      m_ExpandedIDs: 0a99faff1699faff7a36fcffe435fdff1ccbfdff1accfdff20ccfdff1ecdfdff24cdfdfffe90feff90edffff70f3ffffeefaffff64770000b2780000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: DungeonTeleportTarget
+        m_OriginalName: DungeonTeleportTarget
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 30910
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -889,9 +889,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 50.52647, y: 38.854675, z: 24.6922}
+    m_Target: {x: -496.49765, y: -494.16528, z: -20.628124}
     speed: 2
-    m_Value: {x: 50.52647, y: 38.854675, z: 24.6922}
+    m_Value: {x: -496.49765, y: -494.16528, z: -20.628124}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -937,13 +937,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.00076601055, y: 0.87866753, z: -0.0058987825, w: 0.4828388}
+    m_Target: {x: 0.38905355, y: 0.09750164, z: -0.06055124, w: 0.9171199}
     speed: 2
-    m_Value: {x: -0.00076401705, y: 0.87638086, z: -0.005883431, w: 0.48158225}
+    m_Value: {x: 0.38905716, y: 0.09715428, z: -0.060498994, w: 0.91407627}
   m_Size:
-    m_Target: 1.6711097
+    m_Target: 40.026527
     speed: 2
-    m_Value: 1.6711097
+    m_Value: 40.05657
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1003,7 +1003,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_ObjectsLockedBeforeSerialization: []
-  m_InstanceIDsLockedBeforeSerialization: 
+  m_InstanceIDsLockedBeforeSerialization: 4aaf0000
   m_PreviewResizer:
     m_CachedPref: -160
     m_ControlHash: -371814159
@@ -1084,7 +1084,7 @@ MonoBehaviour:
     m_SaveData: []
     m_OverlaysVisible: 1
   m_SearchFilter:
-    m_NameFilter: 
+    m_NameFilter: room
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -1094,24 +1094,24 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets
     m_Globs: []
-    m_OriginalText: 
+    m_OriginalText: room
     m_ImportLogFlags: 0
     m_FilterByTypeIntersection: 0
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets
   m_LastFoldersGridSize: 64
   m_LastProjectPath: C:\rep\Crypto-Dungeon\Crypto_Dungeon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 266.2}
-    m_SelectedIDs: d2840000
-    m_LastClickedID: 34002
-    m_ExpandedIDs: 000000004c8400004e84000050840000d284000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 79}
+    m_SelectedIDs: d6750000
+    m_LastClickedID: 30166
+    m_ExpandedIDs: 00000000d6750000d8750000da7500000e7600001276000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1139,7 +1139,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000004c8400004e84000050840000
+    m_ExpandedIDs: 00000000d6750000d8750000da750000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000de680000ba680000a2680000a6680000c6670000f0260100cc5d00000289000042890000b85e0000a06000008c6c00009c6c0000a66a0000966a00009e6c000008430000466f00001a7200000c710000266d00003a7c0000aa7300009c7e0000fc930000dc890000707d0000aa790000000000006ede0000da7d0200c8e60000
     m_RenameOverlay:
       m_UserAcceptedRename: 0

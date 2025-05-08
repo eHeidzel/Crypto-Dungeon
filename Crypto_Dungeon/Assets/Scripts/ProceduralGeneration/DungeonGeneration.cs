@@ -50,6 +50,8 @@ public class DungeonGeneration : MonoBehaviour
 
             for(int j = 0; j < parentRoom.doors.Length; j++)
             {
+                print(parentRoom.doors[j]);
+                print(parentRoom.doors[j].Direction);
                 Direction direction = parentRoom.doors[j].Direction;
 
                 Vector3 newRoomPosInGenerationMatrix = parentRoom.posInGenerationMatrix + GetOffset(direction);
@@ -190,6 +192,8 @@ public class DungeonGeneration : MonoBehaviour
 
     private void Rotate90Degreses(Room room)
     {
-        //room.transform.rotation.
+        room.transform.Rotate(0, 90, 0);
+        foreach (Door door in room.doors)
+            door.Direction = GetNext(door.Direction);
     }
 }
