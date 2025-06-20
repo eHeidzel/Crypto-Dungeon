@@ -1955,7 +1955,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\u041D\u0438\u0437\u043A\u0438\u0435"
+  m_text: "\u0412\u044B\u0441\u043E\u043A\u0438\u0435"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a7b04c59283437746b674cd0cefffee3, type: 2}
   m_sharedMaterial: {fileID: -4618215900737203806, guid: a7b04c59283437746b674cd0cefffee3, type: 2}
@@ -3726,7 +3726,7 @@ MonoBehaviour:
   m_Placeholder: {fileID: 0}
   m_ItemText: {fileID: 1049351933}
   m_ItemImage: {fileID: 0}
-  m_Value: 0
+  m_Value: 3
   m_Options:
     m_Options:
     - m_Text: "\u041D\u0438\u0437\u043A\u0438\u0435"

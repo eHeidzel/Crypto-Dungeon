@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -30,6 +31,7 @@ public class Settings : MonoBehaviour
         resolutionDropDown.AddOptions(options);
         resolutionDropDown.RefreshShownValue();
         LoadSettings(currentResolutionIndex);
+
     }
 
     public void SetFullScreen(bool isFullScreen)
@@ -60,7 +62,7 @@ public class Settings : MonoBehaviour
         if (PlayerPrefs.HasKey("QualitySettingsPreference"))
             qualityDropDown.value = PlayerPrefs.GetInt("QualitySettingsPreference");
         else
-            qualityDropDown.value = 3;
+            qualityDropDown.value = 2;
 
         if (PlayerPrefs.HasKey("ResolutionPreference"))
             qualityDropDown.value = PlayerPrefs.GetInt("ResolutionPreference");
