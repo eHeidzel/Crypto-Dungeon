@@ -1,4 +1,4 @@
-using System;
+using System.Linq;
 using Assets.Scripts.ProceduralGeneration;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -17,22 +17,51 @@ public class Room : MonoBehaviour
         set => transform.position = value;
     }
 
-    public Door GetRandomDoor() => doors[Random.Range(0, doors.Length)];
+    public Door GetRandomLeadingNowhereDoor() 
+    {
+        var leadingNowhereDoors = doors.Where(door => !door.IsLeading).ToList();
 
-    internal Vector3 GetOffset(Direction direction)
+        if (leadingNowhereDoors.Count == 0)
+            return null;
+
+        return leadingNowhereDoors[Random.Range(0, leadingNowhereDoors.Count)];
+    }
+
+    internal Vector3 GetOffset(Direction direction, FloorLevel floorLevel, float scaleFactor, bool needY=false)
     {
         Vector3 upperRightCorner = upperCorner.localPosition;
 
         float roomWidthX = Mathf.Abs(upperRightCorner.x) + GenerateConstants.WALL_WIDTH;
         float roomWidthZ = Mathf.Abs(upperRightCorner.z) + GenerateConstants.WALL_WIDTH;
+        float roomHeight = Mathf.Abs(upperRightCorner.y) + GenerateConstants.WALL_WIDTH;
+
+        Vector3 offset;
 
         switch (direction)
         {
-            case Direction.Left: return new Vector3(-roomWidthX, 0, 0);
-            case Direction.Right: return new Vector3(roomWidthX, 0, 0);
-            case Direction.Forward: return new Vector3(0, 0, roomWidthZ);
-            case Direction.Back: return new Vector3(0, 0, -roomWidthZ);
+            case Direction.Left: 
+                offset = new Vector3(-roomWidthX, 0, 0);
+                break;
+            case Direction.Right:
+                offset = new Vector3(roomWidthX, 0, 0);
+                break;
+            case Direction.Forward:
+                offset = new Vector3(0, 0, roomWidthZ);
+                break;
+            case Direction.Back:
+                offset = new Vector3(0, 0, -roomWidthZ);
+                break;
             default: throw new System.ArgumentException();
         }
+
+        offset *= scaleFactor;
+
+        if (needY)
+        {
+            int heightDirection = floorLevel == FloorLevel.Upper ? 1 : floorLevel == FloorLevel.Lower ? -1 : 0;
+            offset += new Vector3(0, roomHeight * heightDirection, 0) * 1.5f;
+        }
+
+        return offset;
     }
 }

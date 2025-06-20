@@ -45,3 +45,10 @@ public enum Direction
     Forward,
     Back,
 }
+
+public enum FloorLevel
+{
+    Upper,
+    Same,
+    Lower
+}

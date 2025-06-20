@@ -106,7 +106,7 @@ public class Inventory : MonoBehaviour
 		var gm = itemToDropTr.gameObject;
 
 		gm.SetActive(true);
-		var force = Camera.main.transform.forward;
+		var force = -Camera.main.transform.up;
 		gm.GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);
 
 		ClearSlot();

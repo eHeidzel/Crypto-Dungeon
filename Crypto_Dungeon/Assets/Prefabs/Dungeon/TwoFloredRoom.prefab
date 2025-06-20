@@ -25,43 +25,12 @@ Transform:
   m_GameObject: {fileID: 142517194286183003}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.95, y: 3.96, z: -1.95}
+  m_LocalPosition: {x: -1.95, y: 3.74, z: -1.95}
   m_LocalScale: {x: 0.18669, y: 0.18669, z: 0.18669}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1404881026124545423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &468205324565732925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2363669029128349294}
-  m_Layer: 0
-  m_Name: Door
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2363669029128349294
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 468205324565732925}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: -1.3809116, y: -0.20955637, z: -0.75483495}
-  m_LocalScale: {x: 0.18668999, y: 0.18669, z: 0.18668999}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1404881026124545423}
-  m_LocalEulerAnglesHint: {x: 0, y: -270, z: 0}
 --- !u!1 &1695434940309027983
 GameObject:
   m_ObjectHideFlags: 0
@@ -87,17 +56,16 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1695434940309027983}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4044996344584065021}
   - {fileID: 3369610234808193291}
-  - {fileID: 2363669029128349294}
   - {fileID: 3852117283719574815}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!114 &1663512164207858419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +81,7 @@ MonoBehaviour:
   doors:
   - {fileID: 6422843231859960425}
   - {fileID: 5573730399288192260}
+  - {fileID: 1235522420177796023}
   upperCorner: {fileID: 3369610234808193291}
   posInGenerationMatrix: {x: 0, y: 0, z: 0}
 --- !u!1 &2276958880134534378
@@ -160,6 +129,55 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 2
+  FloorLevel: 1
+  IsLeading: 0
+--- !u!1 &2316845994789977295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7606657172543614291}
+  - component: {fileID: 1235522420177796023}
+  m_Layer: 0
+  m_Name: door
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7606657172543614291
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316845994789977295}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4044996344584065021}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1235522420177796023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2316845994789977295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9607487314c36b94e8b7756269ee409a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Direction: 3
+  FloorLevel: 0
+  IsLeading: 0
 --- !u!1 &2471918302108978144
 GameObject:
   m_ObjectHideFlags: 0
@@ -205,6 +223,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Direction: 3
+  FloorLevel: 1
+  IsLeading: 0
 --- !u!1 &2983994940197271254
 GameObject:
   m_ObjectHideFlags: 0
@@ -236,6 +256,7 @@ Transform:
   m_Children:
   - {fileID: 1129789154574411631}
   - {fileID: 1963166196473887725}
+  - {fileID: 7606657172543614291}
   m_Father: {fileID: 1404881026124545423}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3674868301168775924
