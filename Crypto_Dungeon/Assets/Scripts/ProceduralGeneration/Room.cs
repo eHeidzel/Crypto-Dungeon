@@ -1,5 +1,4 @@
 using System.Linq;
-using Assets.Scripts.ProceduralGeneration;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -31,9 +30,9 @@ public class Room : MonoBehaviour
     {
         Vector3 upperRightCorner = upperCorner.localPosition;
 
-        float roomWidthX = Mathf.Abs(upperRightCorner.x) + GenerateConstants.WALL_WIDTH;
-        float roomWidthZ = Mathf.Abs(upperRightCorner.z) + GenerateConstants.WALL_WIDTH;
-        float roomHeight = Mathf.Abs(upperRightCorner.y) + GenerateConstants.WALL_WIDTH;
+        float roomWidthX = Mathf.Abs(upperRightCorner.x);
+        float roomWidthZ = Mathf.Abs(upperRightCorner.z);
+        float roomHeight = Mathf.Abs(upperRightCorner.y);
 
         Vector3 offset;
 

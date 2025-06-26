@@ -49,7 +49,7 @@ public class ComputerButtonOperations : MonoBehaviour
     public void LoadTutorial(int index)
     {
         GameSaves.PresentedCipher = (CipherType)index;
-        SceneManager.LoadScene("Tutorial");
+        FindAnyObjectByType<CleverSceneLoader>().LoadScene("Tutorial");
     }
 
     public void ReturnToMenu()

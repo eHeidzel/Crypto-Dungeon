@@ -11,6 +11,6 @@ public class MainMenu : MonoBehaviour
     public void StartNewGame()
     {
         PlayerPrefs.SetString("SceneToLoad", "Home");
-        SceneManager.LoadScene("LoadingScreen 1");
+        FindAnyObjectByType<CleverSceneLoader>().LoadScene("LoadingScreen 1");
     }
 }

@@ -44,7 +44,7 @@ public class Slider : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (slideIndex == _maxIndex)
-                SceneManager.LoadScene(_sceneToLoadAfterPresentation);
+                FindAnyObjectByType<CleverSceneLoader>().LoadScene(_sceneToLoadAfterPresentation);
             else
             {
                 slideIndex++;

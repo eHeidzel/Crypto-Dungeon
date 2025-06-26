@@ -1,4 +1,5 @@
 using Assets.Scripts.Inventory;
+using Assets.Scripts.Save;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+	[SerializeField] private ItemsListScriptableObject itemList;
     [SerializeField] private List<Slot> slots;
 	public List<Slot> Slots => slots.ToList();
 
@@ -19,6 +21,33 @@ public class Inventory : MonoBehaviour
 	void Start()
 	{
 		itemRenderer = FindAnyObjectByType<ItemRenderer>();
+		LoadItems();
+	}
+
+	private void LoadItems()
+	{
+		List<ItemScriptableObject> items = GameSaves.Instance.SavedItems;
+
+		foreach (var item in items)
+			if (item != null)
+			{
+				GameObject gm = Instantiate(item.Prefab);
+				Item itemComponent = gm.GetComponentInChildren<Item>();
+				itemComponent.gameObject.SetActive(false);
+
+                AddItem(itemComponent, false);
+			}
+	}
+
+	public void SaveItems()
+	{
+		List<Item> items = new List<Item>();
+
+		foreach (var slot in slots)
+			if (slot.HoldingItem != null)
+				items.Add(slot.HoldingItem);
+
+		InventoryItemsSaver.SaveItems(itemList, items);
 	}
 
 	private void Update()
@@ -27,7 +56,7 @@ public class Inventory : MonoBehaviour
 			DropItem();
 	}
 
-	public bool AddItem(Item item)
+	public bool AddItem(Item item, bool needSelectAnyEmpty=true)
 	{
 		foreach (var slot in slots)
 		{
@@ -40,8 +69,16 @@ public class Inventory : MonoBehaviour
 			image.overrideSprite = item.slotIcon;
 
 			slot.SetItem(item);
-			SelectSlot(slot.Id); //убрать если не хочется, чтобы предмет автоматически выбирался
 
+			if (needSelectAnyEmpty)
+				SelectSlot(slot.Id); //убрать если не хочется, чтобы предмет автоматически выбирался
+
+			var g = item.gameObject;
+			var c = item.gameObject.GetComponent<ItemPickupLimit>();
+
+            item.gameObject.GetComponent<ItemPickupLimit>()?.UpdateState();
+
+			SaveItems();
 			return true;
 		}
 
@@ -110,5 +147,6 @@ public class Inventory : MonoBehaviour
 		gm.GetComponent<Rigidbody>().AddForce(force, ForceMode.Impulse);
 
 		ClearSlot();
+		SaveItems();
 	}
 }

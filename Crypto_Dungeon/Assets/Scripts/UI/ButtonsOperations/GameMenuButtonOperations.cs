@@ -7,7 +7,7 @@ namespace Assets.Scripts.UI.ButtonsOperations
 	{
 		public void ChangeSceneToMainMenu()
 		{
-			SceneManager.LoadScene("MainMenu");
+			FindAnyObjectByType<CleverSceneLoader>().LoadScene("MainMenu");
 		}
 
 		public void ContinueGame()

@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Assets.Scripts.Market.Items;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace Assets.Scripts.Save
@@ -75,6 +77,21 @@ namespace Assets.Scripts.Save
             }
             set => _instance = value;
         }
+
+        public List<ItemScriptableObject> SavedItems { get; set; }
+
+        public List<ItemPickupLimitModel> ItemsPickupLimits { get; set; } = new List<ItemPickupLimitModel>();
+
+
+
+        public void AddPickupItem(ItemPickupLimit item) => ItemsPickupLimits.Add(
+            new ItemPickupLimitModel
+            {
+                Name = item.ItemName,
+                Limit = item.LimitCount
+            });
+
+        public void RemovePickupItem(ItemPickupLimitModel item) => ItemsPickupLimits.Remove(item);
 
         public static GameSaves GetLatestSave()
         {

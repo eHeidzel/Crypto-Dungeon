@@ -1,14 +1,15 @@
 using UnityEngine;
 
 public class Paper : MonoBehaviour
-{ 
-    public Cipher Cipher { get; private set; }
-    public bool IsDecoded { get; private set; }
+{
+    private Cipher _cipher;
 
-    private void Start()
+    public Cipher Cipher
     {
-        Cipher = RandomCipherGenerator.GetRandomCipher();
+        get => _cipher ??= RandomCipherGenerator.GetRandomCipher();
     }
+
+    public bool IsDecoded { get; private set; }
 
     public void ChangeStateToDecoded() => IsDecoded = true;
 }

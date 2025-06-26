@@ -22,7 +22,7 @@ public class PlanetButtons : MonoBehaviour
     public void ChoosePlanet(string name)
     {
         PlayerPrefs.SetString("SceneToLoad", name);
-        SceneManager.LoadScene("LoadingScreen 1");
+        FindAnyObjectByType<CleverSceneLoader>().LoadScene("LoadingScreen 1");
     }
 
 

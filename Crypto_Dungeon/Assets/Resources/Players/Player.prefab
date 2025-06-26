@@ -187,7 +187,7 @@ MonoBehaviour:
   gravity: 8
   lookSpeed: 2
   lookXLimit: 80
-  canMove: 1
+  CanMove: 1
 --- !u!114 &4465112684160865051
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b2ab5c364cefa8346aa5469d56d3ecf7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  itemList: {fileID: 11400000, guid: 117b064e050d9a24689dea7c3aa297cf, type: 2}
   slots:
   - {fileID: 0}
   - {fileID: 0}
